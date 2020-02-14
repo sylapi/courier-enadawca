@@ -84,7 +84,7 @@ class Enadawca extends Connect
 
         if (!empty($this->parameters['custom_id'])) {
 
-            $getAddresLabelByGuid = new getAddresLabelByGuid();
+            $getAddresLabelByGuid = new getPrintForParcel();
             $getAddresLabelByGuid->prepareData($this->parameters)->call($this->client);
 
             $this->setResponse($getAddresLabelByGuid->getResponse());

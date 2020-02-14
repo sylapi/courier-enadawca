@@ -11,7 +11,7 @@ class getPrintForParcel
         $this->data = array(
             'guid' => $parameters['custom_id'],
             'type' => [
-                'kind' => 'CUSTOMS_DECLARATION',
+                'kind' => 'ADDRESS_LABEL',
                 'method' => 'EACH_PARCEL_SEPARATELY'
             ]
         );
@@ -22,15 +22,17 @@ class getPrintForParcel
     public function call($client) {
 
         try {
-            pr($this->data);
+
             $result = $client->getPrintForParcel($this->data);
-            pr($result);
 
-            $this->response['error'] = $result->retval->error[0]->errorDesc.'';
-            $this->response['code'] = $result->retval->error[0]->errorNumber.'';
+            if (isset($result->printResult->print)) {
 
-            if (empty($this->response['error'])) {
-                $this->response['return'] = $result;
+                $this->response['return'] = $result->printResult->print;
+            }
+            else {
+
+                $this->response['error'] = $result->retval->error->errorDesc.'';
+                $this->response['code'] = $result->retval->error->errorNumber.'';
             }
         }
         catch (\SoapFault $e) {
@@ -42,7 +44,7 @@ class getPrintForParcel
 
     public function getResponse() {
 
-        if (!empty($this->response['return']) && $this->response['return'] > 0) {
+        if (!empty($this->response['return'])) {
             return $this->response['return'];
         }
         return null;
@@ -50,7 +52,7 @@ class getPrintForParcel
 
     public function isSuccess() {
 
-        if (!empty($this->response['return']) && $this->response['return'] > 0 && $this->getError() == '') {
+        if (!empty($this->response['return']) && $this->getError() == '') {
             return true;
         }
         return false;

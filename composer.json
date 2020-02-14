@@ -22,7 +22,7 @@
         "phpunit/phpunit": "^5.3"
     },
     "autoload": {
-        "psr-4": { "Sylapi\\Courier\\Enadawca" : "src/" }
+        "psr-4": { "Sylapi\\Courier\\Enadawca\\" : "src/" }
     },
     "prefer-stable": false
 }

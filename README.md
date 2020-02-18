@@ -24,6 +24,20 @@ $courier->sandbox(true);
 $courier->setLogin('123456');
 $courier->setPassword('abc12345def');
 
+$address = [
+    'name' => 'Name Lastname',
+    'company' => 'Company Name',
+    'street' => 'Street 123/2A',
+    'postcode' => '12-123',
+    'city' => 'Warszawa',
+    'country' => 'PL',
+    'phone' => '602602602',
+    'email' => 'name@example.com'
+];
+
+$courier->setSender($address);
+$courier->setReceiver($address);
+
 $courier->setOptions([
         'weight' => 3.00,
         'width' => 30.00,

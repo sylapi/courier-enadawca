@@ -77,7 +77,7 @@ class addShipment
                 $result->retval = $result->retval[0];
             }
 
-            if (is_array($result->retval->error)) {
+            if (isset($result->retval->error) && is_array($result->retval->error)) {
                 $result->retval->error = $result->retval->error[0];
             }
 

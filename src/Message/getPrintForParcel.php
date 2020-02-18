@@ -59,10 +59,10 @@ class getPrintForParcel
     }
 
     public function getError() {
-        return $this->response['error'];
+        return (isset($this->response['error'])) ? $this->response['error'] : '';
     }
 
     public function getCode() {
-        return $this->response['code'];
+        return (isset($this->response['code'])) ? $this->response['code'] : '';
     }
 }

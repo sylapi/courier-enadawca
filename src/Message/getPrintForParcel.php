@@ -31,8 +31,8 @@ class getPrintForParcel
             }
             else {
 
-                $this->response['error'] = $result->retval->error->errorDesc.'';
-                $this->response['code'] = $result->retval->error->errorNumber.'';
+                $this->response['error'] = $result->error->errorDesc.'';
+                $this->response['code'] = $result->error->errorNumber.'';
             }
         }
         catch (\SoapFault $e) {

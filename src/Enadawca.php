@@ -3,6 +3,7 @@ namespace Sylapi\Courier\Enadawca;
 
 use Sylapi\Courier\Enadawca\Message\getGuid;
 use Sylapi\Courier\Enadawca\Message\clearEnvelopeByGuids;
+use Sylapi\Courier\Enadawca\Message\getPrintForParcel;
 use Sylapi\Courier\Enadawca\Message\addShipment;
 
 class Enadawca extends Connect

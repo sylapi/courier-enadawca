@@ -1,18 +1,17 @@
 <?php
+
 namespace Sylapi\Courier\Enadawca\Message;
 
 use Sylapi\Courier\Common\Helper;
-use Sylapi\Courier\Common\HelperGuid;
-
 
 class addShipment
 {
     private $data;
     private $response;
 
-    public function prepareData($parameters) {
-
-        include_once(__DIR__.'/_add_shippment.php');
+    public function prepareData($parameters)
+    {
+        include_once __DIR__.'/_add_shippment.php';
 
         $shippment = new \addShipment();
 
@@ -42,7 +41,6 @@ class addShipment
         $shippmentType->guid = Helper::guid();
 
         if (isset($parameters['options']['custom']['ubezpieczenie'])) {
-
             $ubezpieczenieType = new \ubezpieczenieType();
             $ubezpieczenieType->rodzaj = 'STANDARD';
             $ubezpieczenieType->kwota = $parameters['options']['custom']['ubezpieczenie'];
@@ -51,7 +49,6 @@ class addShipment
         }
 
         if ($parameters['options']['cod'] == true) {
-
             $pobranieType = new \pobranieType();
             $pobranieType->kwotaPobrania = ($parameters['options']['cod'] == true) ? $parameters['options']['amount'] : '';
             $pobranieType->nrb = $parameters['options']['bank_number'];
@@ -67,10 +64,9 @@ class addShipment
         return $this;
     }
 
-    public function call($client) {
-
+    public function call($client)
+    {
         try {
-
             $result = $client->addShipment($this->data);
 
             if (is_array($result->retval)) {
@@ -82,46 +78,45 @@ class addShipment
             }
 
             if (isset($result->retval->numerNadania)) {
-
                 $this->response['return'] = [
                     'tracking_id' => $result->retval->numerNadania,
-                    'custom_id' => $result->retval->guid.'',
+                    'custom_id'   => $result->retval->guid.'',
                 ];
-            }
-            else {
-
+            } else {
                 $this->response['error'] = $result->retval->error->errorDesc.'';
                 $this->response['code'] = $result->retval->error->errorNumber.'';
             }
-        }
-        catch (\SoapFault $e) {
-
+        } catch (\SoapFault $e) {
             $this->response['error'] = $e->faultactor.' | '.$e->faultstring;
             $this->response['code'] = $e->faultcode.'';
         }
     }
 
-    public function getResponse() {
-
+    public function getResponse()
+    {
         if (!empty($this->response['return'])) {
             return $this->response['return'];
         }
+
         return null;
     }
 
-    public function isSuccess() {
-
+    public function isSuccess()
+    {
         if (!empty($this->response['return']) && $this->getError() == null) {
             return true;
         }
+
         return false;
     }
 
-    public function getError() {
+    public function getError()
+    {
         return (!empty($this->response['error'])) ? $this->response['error'] : null;
     }
 
-    public function getCode() {
+    public function getCode()
+    {
         return (!empty($this->response['code'])) ? $this->response['code'] : null;
     }
 }

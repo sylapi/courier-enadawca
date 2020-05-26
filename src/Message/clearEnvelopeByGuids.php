@@ -1,11 +1,25 @@
 <?php
 namespace Sylapi\Courier\Enadawca\Message;
 
+/**
+ * Class clearEnvelopeByGuids
+ * @package Sylapi\Courier\Enadawca\Message
+ */
 class clearEnvelopeByGuids
 {
+    /**
+     * @var
+     */
     private $data;
+    /**
+     * @var
+     */
     private $response;
 
+    /**
+     * @param array $data
+     * @return $this
+     */
     public function prepareData($data=[]) {
 
         $this->data = array(
@@ -14,6 +28,9 @@ class clearEnvelopeByGuids
         return $this;
     }
 
+    /**
+     * @param $client
+     */
     public function call($client) {
 
         try {
@@ -28,6 +45,9 @@ class clearEnvelopeByGuids
         }
     }
 
+    /**
+     * @return |null
+     */
     public function getResponse() {
         if (!empty($this->response['return']) && $this->response['return'] > 0) {
             return $this->response['return'];
@@ -35,6 +55,9 @@ class clearEnvelopeByGuids
         return null;
     }
 
+    /**
+     * @return bool
+     */
     public function isSuccess() {
         if (!empty($this->response['return']) && $this->response['return'] > 0) {
             return true;
@@ -42,10 +65,16 @@ class clearEnvelopeByGuids
         return false;
     }
 
+    /**
+     * @return mixed
+     */
     public function getError() {
         return $this->response['error'];
     }
 
+    /**
+     * @return mixed
+     */
     public function getCode() {
         return $this->response['code'];
     }

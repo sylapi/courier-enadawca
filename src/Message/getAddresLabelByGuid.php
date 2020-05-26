@@ -1,27 +1,41 @@
 <?php
 namespace Sylapi\Courier\Enadawca\Message;
 
+/**
+ * Class getAddresLabelByGuid
+ * @package Sylapi\Courier\Enadawca\Message
+ */
 class getAddresLabelByGuid
 {
+    /**
+     * @var
+     */
     private $data;
+    /**
+     * @var
+     */
     private $response;
 
+    /**
+     * @param $parameters
+     * @return $this
+     */
     public function prepareData($parameters) {
 
         $this->data = array(
             'guid' => $parameters['custom_id'],
-            //'idBufor' => ''
         );
 
         return $this;
     }
 
+    /**
+     * @param $client
+     */
     public function call($client) {
 
         try {
-            print_r($this->data);
             $result = $client->getAddresLabelByGuid($this->data);
-            print_r($result);
 
             $this->response['error'] = $result->retval->error[0]->errorDesc.'';
             $this->response['code'] = $result->retval->error[0]->errorNumber.'';
@@ -31,12 +45,14 @@ class getAddresLabelByGuid
             }
         }
         catch (\SoapFault $e) {
-            print_r($e);
             $this->response['error'] = $e->faultactor.' | '.$e->faultstring;
             $this->response['code'] = $e->faultcode.'';
         }
     }
 
+    /**
+     * @return |null
+     */
     public function getResponse() {
 
         if (!empty($this->response['return']) && $this->response['return'] > 0) {
@@ -45,6 +61,9 @@ class getAddresLabelByGuid
         return null;
     }
 
+    /**
+     * @return bool
+     */
     public function isSuccess() {
 
         if (!empty($this->response['return']) && $this->response['return'] > 0 && $this->getError() == '') {
@@ -53,10 +72,16 @@ class getAddresLabelByGuid
         return false;
     }
 
+    /**
+     * @return mixed
+     */
     public function getError() {
         return $this->response['error'];
     }
 
+    /**
+     * @return mixed
+     */
     public function getCode() {
         return $this->response['code'];
     }

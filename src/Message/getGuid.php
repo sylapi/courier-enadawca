@@ -1,11 +1,25 @@
 <?php
 namespace Sylapi\Courier\Enadawca\Message;
 
+/**
+ * Class getGuid
+ * @package Sylapi\Courier\Enadawca\Message
+ */
 class getGuid
 {
+    /**
+     * @var
+     */
     private $data;
+    /**
+     * @var
+     */
     private $response;
 
+    /**
+     * @param $parameters
+     * @return $this
+     */
     public function prepareData($parameters) {
 
         $this->data = $parameters;
@@ -14,6 +28,9 @@ class getGuid
         return $this;
     }
 
+    /**
+     * @param $client
+     */
     public function call($client) {
 
         try {
@@ -33,6 +50,9 @@ class getGuid
         }
     }
 
+    /**
+     * @return |null
+     */
     public function getResponse() {
 
         if (!empty($this->response['return'])) {
@@ -41,6 +61,9 @@ class getGuid
         return null;
     }
 
+    /**
+     * @return bool
+     */
     public function isSuccess() {
 
         if (!empty($this->response['return']) && $this->getError() == '') {
@@ -49,10 +72,16 @@ class getGuid
         return false;
     }
 
+    /**
+     * @return mixed
+     */
     public function getError() {
         return $this->response['error'];
     }
 
+    /**
+     * @return mixed
+     */
     public function getCode() {
         return $this->response['code'];
     }

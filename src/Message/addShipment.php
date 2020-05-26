@@ -5,11 +5,25 @@ use Sylapi\Courier\Common\Helper;
 use Sylapi\Courier\Common\HelperGuid;
 
 
+/**
+ * Class addShipment
+ * @package Sylapi\Courier\Enadawca\Message
+ */
 class addShipment
 {
+    /**
+     * @var
+     */
     private $data;
+    /**
+     * @var
+     */
     private $response;
 
+    /**
+     * @param $parameters
+     * @return $this
+     */
     public function prepareData($parameters) {
 
         include_once(__DIR__.'/_add_shippment.php');
@@ -67,6 +81,9 @@ class addShipment
         return $this;
     }
 
+    /**
+     * @param $client
+     */
     public function call($client) {
 
         try {
@@ -101,6 +118,9 @@ class addShipment
         }
     }
 
+    /**
+     * @return |null
+     */
     public function getResponse() {
 
         if (!empty($this->response['return'])) {
@@ -109,6 +129,9 @@ class addShipment
         return null;
     }
 
+    /**
+     * @return bool
+     */
     public function isSuccess() {
 
         if (!empty($this->response['return']) && $this->getError() == null) {
@@ -117,10 +140,16 @@ class addShipment
         return false;
     }
 
+    /**
+     * @return |null
+     */
     public function getError() {
         return (!empty($this->response['error'])) ? $this->response['error'] : null;
     }
 
+    /**
+     * @return |null
+     */
     public function getCode() {
         return (!empty($this->response['code'])) ? $this->response['code'] : null;
     }

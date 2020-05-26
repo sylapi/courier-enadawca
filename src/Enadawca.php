@@ -6,10 +6,20 @@ use Sylapi\Courier\Enadawca\Message\clearEnvelopeByGuids;
 use Sylapi\Courier\Enadawca\Message\getPrintForParcel;
 use Sylapi\Courier\Enadawca\Message\addShipment;
 
+/**
+ * Class Enadawca
+ * @package Sylapi\Courier\Enadawca
+ */
 class Enadawca extends Connect
 {
+    /**
+     * @var
+     */
     protected $session;
 
+    /**
+     * @param $parameters
+     */
     public function initialize($parameters) {
 
         $this->parameters = $parameters;
@@ -24,6 +34,9 @@ class Enadawca extends Connect
         }
     }
 
+    /**
+     * @return bool
+     */
     public function login() {
 
         if (empty($this->client)) {
@@ -47,23 +60,17 @@ class Enadawca extends Connect
        return false;
     }
 
+    /**
+     * Validation package data
+     */
     public function ValidateData() {
 
         $this->setResponse(['result' => true]);
-
-        /*
-        $getGuid = new getGuid();
-        $getGuid->prepareData($this->parameters)->call($this->client);
-
-        $this->setResponse($getGuid->getResponse());
-        $this->setError($getGuid->getError());
-
-        if ($getGuid->isSuccess()) {
-            $this->preparing_delete($this->getResponse());
-        }
-        */
     }
 
+    /**
+     * Get label data
+     */
     public function GetLabel() {
 
         $this->login();
@@ -85,14 +92,17 @@ class Enadawca extends Connect
 
         if (!empty($this->parameters['custom_id'])) {
 
-            $getAddresLabelByGuid = new getPrintForParcel();
-            $getAddresLabelByGuid->prepareData($this->parameters)->call($this->client);
+            $getPrintForParcel = new getPrintForParcel();
+            $getPrintForParcel->prepareData($this->parameters)->call($this->client);
 
-            $this->setResponse($getAddresLabelByGuid->getResponse());
-            $this->setError($getAddresLabelByGuid->getError());
+            $this->setResponse($getPrintForParcel->getResponse());
+            $this->setError($getPrintForParcel->getError());
         }
     }
 
+    /**
+     * Create package
+     */
     public function CreatePackage() {
 
         $this->login();
@@ -110,6 +120,9 @@ class Enadawca extends Connect
         $this->setError($addShipment->getError());
     }
 
+    /**
+     * Check cost package
+     */
     public function CheckPrice() {
 
         $response = (isset($this->parameters['options']['custom']['parcel_cost'])) ? $this->parameters['options']['custom']['parcel_cost'] : 0;
@@ -117,7 +130,9 @@ class Enadawca extends Connect
     }
 
 
-
+    /**
+     * @param $guid_id
+     */
     private function preparing_delete($guid_id) {
 
         $clearEnvelopeByGuids = new clearEnvelopeByGuids();

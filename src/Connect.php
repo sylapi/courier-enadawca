@@ -2,23 +2,54 @@
 
 namespace Sylapi\Courier\Enadawca;
 
+/**
+ * Class Connect
+ * @package Sylapi\Courier\Enadawca
+ */
 abstract class Connect
 {
     const API_LIVE = 'https://e-nadawca.poczta-polska.pl/websrv/en.wsdl';
+
     const API_SANDBOX = 'https://en-testwebapi.poczta-polska.pl/websrv/en.wsdl';
 
+    /**
+     * @var string
+     */
     protected $api_uri;
+    /**
+     * @var
+     */
     protected $client;
+    /**
+     * @var
+     */
     protected $login;
+    /**
+     * @var
+     */
     protected $password;
+    /**
+     * @var
+     */
     protected $parameters;
+    /**
+     * @var
+     */
     protected $error;
+    /**
+     * @var
+     */
     protected $response;
+    /**
+     * @var string
+     */
     protected $code = '';
 
+    /**
+     * @var array
+     */
     protected static $classmap = array(
         'addShipment' => 'addShipment',
-        //'addShipmentResponse' => 'addShipmentResponse',
         'przesylkaType' => 'przesylkaType',
         'pocztexKrajowyType' => 'pocztexKrajowyType',
         'umowaType' => 'umowaType',
@@ -53,7 +84,6 @@ abstract class Connect
         'przesylkaHandlowaType' => 'przesylkaHandlowaType',
         'przesylkaListowaZadeklarowanaWartoscType' => 'przesylkaListowaZadeklarowanaWartoscType',
         'przesylkaFullType' => 'przesylkaFullType',
-        //'errorType' => 'errorType',
         'adresType' => 'adresType',
         'sendEnvelope' => 'sendEnvelope',
         'sendEnvelopeResponseType' => 'sendEnvelopeResponseType',
@@ -83,7 +113,6 @@ abstract class Connect
         'downloadIWDContent' => 'downloadIWDContent',
         'downloadIWDContentResponse' => 'downloadIWDContentResponse',
         'przesylkaShortType' => 'przesylkaShortType',
-         //'addShipmentResponseItemType' => 'addShipmentResponseItemType',
         'getKarty' => 'getKarty',
         'getKartyResponse' => 'getKartyResponse',
         'getPasswordExpiredDate' => 'getPasswordExpiredDate',
@@ -294,60 +323,107 @@ abstract class Connect
         'getPrintForParcel' => 'getPrintForParcel'
     );
 
+    /**
+     * Connect constructor.
+     */
     public function __construct() {
         $this->api_uri = self::API_LIVE;
     }
 
+    /**
+     * @param $login
+     * @return mixed
+     */
     protected function setLogin($login) {
         return $this->login = $login;
     }
 
+    /**
+     * @param $password
+     * @return mixed
+     */
     protected function setPassword($password) {
         return $this->password = $password;
     }
 
+    /**
+     * @return string
+     */
     public function getApiUri() {
         return $this->api_uri;
     }
 
+    /**
+     * @return string
+     */
     public function sandbox() {
         return $this->api_uri = self::API_SANDBOX;
     }
 
+    /**
+     * @return bool
+     */
     public function isSuccess() {
         return (empty($this->error)) ? true : false;
     }
 
+    /**
+     * @return mixed
+     */
     public function getError() {
         return $this->error;
     }
 
+    /**
+     * @param $value
+     * @return mixed
+     */
     protected function setError($value) {
         if (!empty($value)) {
             return $this->error[] = $value;
         }
     }
 
+    /**
+     * @param $value
+     * @return mixed
+     */
     protected function setCode($value) {
         return $this->code = $value;
     }
 
+    /**
+     * @return string
+     */
     public function getCode() {
         return $this->code;
     }
 
+    /**
+     * @param $value
+     * @return mixed
+     */
     protected function setResponse($value) {
         return $this->response = $value;
     }
 
+    /**
+     * @return mixed
+     */
     public function getResponse() {
         return $this->response;
     }
 
+    /**
+     * @param $soap
+     */
     public function setSoapClient($soap) {
         $this->client = $soap;
     }
 
+    /**
+     * @return array
+     */
     public function debug() {
 
         return [

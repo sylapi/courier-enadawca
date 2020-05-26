@@ -50,13 +50,14 @@ class GetLabelTest extends PHPUnitTestCase
             'sender' => $this->address,
             'receiver' => $this->address,
             'options' => $this->options,
+            'custom_id' => 123
         ];
 
         $this->enadawca = new Enadawca();
         $this->enadawca->initialize($params);
     }
 
-    public function testGetLabelTestSuccess()
+    public function testGetLabelSuccess()
     {
         $localXml = file_get_contents(__DIR__ . '/Mock/getPrintForParcelSuccess.xml');
 
@@ -72,7 +73,7 @@ class GetLabelTest extends PHPUnitTestCase
         $this->assertNotNull($this->enadawca->getResponse());
     }
 
-    public function testGetLabelTestFailure()
+    public function testGetLabelFailure()
     {
         $localXml = file_get_contents(__DIR__ . '/Mock/getPrintForParcelFailure.xml');
 

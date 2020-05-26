@@ -1,11 +1,25 @@
 <?php
 namespace Sylapi\Courier\Enadawca\Message;
 
+/**
+ * Class getPrintForParcel
+ * @package Sylapi\Courier\Enadawca\Message
+ */
 class getPrintForParcel
 {
+    /**
+     * @var
+     */
     private $data;
+    /**
+     * @var
+     */
     private $response;
 
+    /**
+     * @param $parameters
+     * @return $this
+     */
     public function prepareData($parameters) {
 
         $this->data = array(
@@ -19,6 +33,9 @@ class getPrintForParcel
         return $this;
     }
 
+    /**
+     * @param $client
+     */
     public function call($client) {
 
         try {
@@ -42,6 +59,9 @@ class getPrintForParcel
         }
     }
 
+    /**
+     * @return |null
+     */
     public function getResponse() {
 
         if (!empty($this->response['return'])) {
@@ -50,6 +70,9 @@ class getPrintForParcel
         return null;
     }
 
+    /**
+     * @return bool
+     */
     public function isSuccess() {
 
         if (!empty($this->response['return']) && $this->getError() == '') {
@@ -58,10 +81,16 @@ class getPrintForParcel
         return false;
     }
 
+    /**
+     * @return string
+     */
     public function getError() {
         return (isset($this->response['error'])) ? $this->response['error'] : '';
     }
 
+    /**
+     * @return string
+     */
     public function getCode() {
         return (isset($this->response['code'])) ? $this->response['code'] : '';
     }

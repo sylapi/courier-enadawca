@@ -44,12 +44,15 @@ class addShipment
         $address->mobile = $parameters['receiver']['phone'];
         $address->nip = '';
 
+        $weight = (int)$parameters['options']['weight'];
+        $price = (int)$parameters['options']['amount'];
+
         $shippmentType = new \przesylkaBiznesowaType();
         $shippmentType->urzadWydaniaEPrzesylki = '';
         $shippmentType->subPrzesylka = '';
         $shippmentType->gabaryt = $parameters['options']['custom']['gabaryt'];
-        $shippmentType->masa = ($parameters['options']['weight'] * 1000);
-        $shippmentType->wartosc = ($parameters['options']['amount'] * 100);
+        $shippmentType->masa = ($weight * 1000);
+        $shippmentType->wartosc = ($price * 100);
         $shippmentType->ostroznie = isset($parameters['options']['custom']['ostroznie']) ? $parameters['options']['custom']['ostroznie'] : 0;
         $shippmentType->opis = $parameters['options']['references'];
         $shippmentType->adres = $address;

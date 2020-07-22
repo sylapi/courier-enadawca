@@ -50,7 +50,7 @@ class addShipment
         $shippmentType = new \przesylkaBiznesowaType();
         $shippmentType->urzadWydaniaEPrzesylki = '';
         $shippmentType->subPrzesylka = '';
-        $shippmentType->gabaryt = $parameters['options']['custom']['gabaryt'];
+        $shippmentType->gabaryt = (!empty($parameters['options']['custom']['gabaryt'])) ? $parameters['options']['custom']['gabaryt'] : 'XXL';
         $shippmentType->masa = ($weight * 1000);
         $shippmentType->wartosc = ($price * 100);
         $shippmentType->ostroznie = isset($parameters['options']['custom']['ostroznie']) ? $parameters['options']['custom']['ostroznie'] : 0;

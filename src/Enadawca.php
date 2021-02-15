@@ -1,14 +1,14 @@
 <?php
+
 namespace Sylapi\Courier\Enadawca;
 
-use Sylapi\Courier\Enadawca\Message\getGuid;
-use Sylapi\Courier\Enadawca\Message\clearEnvelopeByGuids;
-use Sylapi\Courier\Enadawca\Message\getPrintForParcel;
 use Sylapi\Courier\Enadawca\Message\addShipment;
+use Sylapi\Courier\Enadawca\Message\clearEnvelopeByGuids;
+use Sylapi\Courier\Enadawca\Message\getGuid;
+use Sylapi\Courier\Enadawca\Message\getPrintForParcel;
 
 /**
- * Class Enadawca
- * @package Sylapi\Courier\Enadawca
+ * Class Enadawca.
  */
 class Enadawca extends Connect
 {
@@ -20,16 +20,14 @@ class Enadawca extends Connect
     /**
      * @param $parameters
      */
-    public function initialize($parameters) {
-
+    public function initialize($parameters)
+    {
         $this->parameters = $parameters;
 
         if (!empty($parameters['accessData'])) {
-
             $this->setLogin($parameters['accessData']['login']);
             $this->setPassword($parameters['accessData']['password']);
-        }
-        else {
+        } else {
             $this->setError('Access Data is empty');
         }
     }
@@ -37,10 +35,9 @@ class Enadawca extends Connect
     /**
      * @return bool
      */
-    public function login() {
-
+    public function login()
+    {
         if (empty($this->client)) {
-
             foreach (self::$classmap as $key => $value) {
                 if (!isset($options['classmap'][$key])) {
                     $options['classmap'][$key] = $value;
@@ -57,26 +54,25 @@ class Enadawca extends Connect
             $this->client->decode_utf8 = true;
         }
 
-       return false;
+        return false;
     }
 
     /**
-     * Validation package data
+     * Validation package data.
      */
-    public function ValidateData() {
-
+    public function ValidateData()
+    {
         $this->setResponse(['result' => true]);
     }
 
     /**
-     * Get label data
+     * Get label data.
      */
-    public function GetLabel() {
-
+    public function GetLabel()
+    {
         $this->login();
 
         if (empty($this->parameters['custom_id'])) {
-
             $getGuid = new getGuid();
             $getGuid->prepareData($this->parameters)->call($this->client);
 
@@ -84,14 +80,12 @@ class Enadawca extends Connect
             $this->setError($getGuid->getError());
 
             if ($getGuid->isSuccess()) {
-
                 $guids = $this->getResponse();
                 $this->parameters['custom_id'] = $guids[0];
             }
         }
 
         if (!empty($this->parameters['custom_id'])) {
-
             $getPrintForParcel = new getPrintForParcel();
             $getPrintForParcel->prepareData($this->parameters)->call($this->client);
 
@@ -101,10 +95,10 @@ class Enadawca extends Connect
     }
 
     /**
-     * Create package
+     * Create package.
      */
-    public function CreatePackage() {
-
+    public function CreatePackage()
+    {
         $this->login();
 
         $addShipment = new addShipment();
@@ -121,20 +115,19 @@ class Enadawca extends Connect
     }
 
     /**
-     * Check cost package
+     * Check cost package.
      */
-    public function CheckPrice() {
-
+    public function CheckPrice()
+    {
         $response = (isset($this->parameters['options']['custom']['parcel_cost'])) ? $this->parameters['options']['custom']['parcel_cost'] : 0;
         $this->setResponse($response);
     }
 
-
     /**
      * @param $guid_id
      */
-    private function preparing_delete($guid_id) {
-
+    private function preparing_delete($guid_id)
+    {
         $clearEnvelopeByGuids = new clearEnvelopeByGuids();
         $clearEnvelopeByGuids->prepareData($guid_id)->call($this->client, $this->session);
     }

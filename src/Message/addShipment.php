@@ -1,13 +1,11 @@
 <?php
+
 namespace Sylapi\Courier\Enadawca\Message;
 
 use Sylapi\Courier\Common\Helper;
-use Sylapi\Courier\Common\HelperGuid;
-
 
 /**
- * Class addShipment
- * @package Sylapi\Courier\Enadawca\Message
+ * Class addShipment.
  */
 class addShipment
 {
@@ -22,11 +20,12 @@ class addShipment
 
     /**
      * @param $parameters
+     *
      * @return $this
      */
-    public function prepareData($parameters) {
-
-        include_once(__DIR__.'/_add_shippment.php');
+    public function prepareData($parameters)
+    {
+        include_once __DIR__.'/_add_shippment.php';
 
         $shippment = new \addShipment();
 
@@ -44,8 +43,8 @@ class addShipment
         $address->mobile = $parameters['receiver']['phone'];
         $address->nip = '';
 
-        $weight = (int)$parameters['options']['weight'];
-        $price = (int)$parameters['options']['amount'];
+        $weight = (int) $parameters['options']['weight'];
+        $price = (int) $parameters['options']['amount'];
 
         $shippmentType = new \przesylkaBiznesowaType();
         $shippmentType->urzadWydaniaEPrzesylki = '';
@@ -59,7 +58,6 @@ class addShipment
         $shippmentType->guid = Helper::guid();
 
         if (isset($parameters['options']['custom']['ubezpieczenie'])) {
-
             $ubezpieczenieType = new \ubezpieczenieType();
             $ubezpieczenieType->rodzaj = 'STANDARD';
             $ubezpieczenieType->kwota = $parameters['options']['custom']['ubezpieczenie'];
@@ -68,7 +66,6 @@ class addShipment
         }
 
         if ($parameters['options']['cod'] == true) {
-
             $pobranieType = new \pobranieType();
             $pobranieType->kwotaPobrania = ($parameters['options']['cod'] == true) ? $parameters['options']['amount'] : '';
             $pobranieType->nrb = $parameters['options']['bank_number'];
@@ -87,10 +84,9 @@ class addShipment
     /**
      * @param $client
      */
-    public function call($client) {
-
+    public function call($client)
+    {
         try {
-
             $result = $client->addShipment($this->data);
 
             if (is_array($result->retval)) {
@@ -102,20 +98,15 @@ class addShipment
             }
 
             if (isset($result->retval->numerNadania)) {
-
                 $this->response['return'] = [
                     'tracking_id' => $result->retval->numerNadania,
-                    'custom_id' => $result->retval->guid.'',
+                    'custom_id'   => $result->retval->guid.'',
                 ];
-            }
-            else {
-
+            } else {
                 $this->response['error'] = $result->retval->error->errorDesc.'';
                 $this->response['code'] = $result->retval->error->errorNumber.'';
             }
-        }
-        catch (\SoapFault $e) {
-
+        } catch (\SoapFault $e) {
             $this->response['error'] = $e->faultactor.' | '.$e->faultstring;
             $this->response['code'] = $e->faultcode.'';
         }
@@ -124,36 +115,40 @@ class addShipment
     /**
      * @return |null
      */
-    public function getResponse() {
-
+    public function getResponse()
+    {
         if (!empty($this->response['return'])) {
             return $this->response['return'];
         }
+
         return null;
     }
 
     /**
      * @return bool
      */
-    public function isSuccess() {
-
+    public function isSuccess()
+    {
         if (!empty($this->response['return']) && $this->getError() == null) {
             return true;
         }
+
         return false;
     }
 
     /**
      * @return |null
      */
-    public function getError() {
+    public function getError()
+    {
         return (!empty($this->response['error'])) ? $this->response['error'] : null;
     }
 
     /**
      * @return |null
      */
-    public function getCode() {
+    public function getCode()
+    {
         return (!empty($this->response['code'])) ? $this->response['code'] : null;
     }
 }

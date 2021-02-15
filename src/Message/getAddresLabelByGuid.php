@@ -1,9 +1,9 @@
 <?php
+
 namespace Sylapi\Courier\Enadawca\Message;
 
 /**
- * Class getAddresLabelByGuid
- * @package Sylapi\Courier\Enadawca\Message
+ * Class getAddresLabelByGuid.
  */
 class getAddresLabelByGuid
 {
@@ -18,13 +18,14 @@ class getAddresLabelByGuid
 
     /**
      * @param $parameters
+     *
      * @return $this
      */
-    public function prepareData($parameters) {
-
-        $this->data = array(
+    public function prepareData($parameters)
+    {
+        $this->data = [
             'guid' => $parameters['custom_id'],
-        );
+        ];
 
         return $this;
     }
@@ -32,8 +33,8 @@ class getAddresLabelByGuid
     /**
      * @param $client
      */
-    public function call($client) {
-
+    public function call($client)
+    {
         try {
             $result = $client->getAddresLabelByGuid($this->data);
 
@@ -43,8 +44,7 @@ class getAddresLabelByGuid
             if (empty($this->response['error'])) {
                 $this->response['return'] = $result;
             }
-        }
-        catch (\SoapFault $e) {
+        } catch (\SoapFault $e) {
             $this->response['error'] = $e->faultactor.' | '.$e->faultstring;
             $this->response['code'] = $e->faultcode.'';
         }
@@ -53,36 +53,40 @@ class getAddresLabelByGuid
     /**
      * @return |null
      */
-    public function getResponse() {
-
+    public function getResponse()
+    {
         if (!empty($this->response['return']) && $this->response['return'] > 0) {
             return $this->response['return'];
         }
+
         return null;
     }
 
     /**
      * @return bool
      */
-    public function isSuccess() {
-
+    public function isSuccess()
+    {
         if (!empty($this->response['return']) && $this->response['return'] > 0 && $this->getError() == '') {
             return true;
         }
+
         return false;
     }
 
     /**
      * @return mixed
      */
-    public function getError() {
+    public function getError()
+    {
         return $this->response['error'];
     }
 
     /**
      * @return mixed
      */
-    public function getCode() {
+    public function getCode()
+    {
         return $this->response['code'];
     }
 }

@@ -2,14 +2,13 @@
 
 use Sylapi\Courier\CourierFactory;
 
-$courier = CourierFactory::create('Olza', [
-    'login'           => 'mylogin',
-    'password'        => 'mypassword',
-    'sandbox'         => true,
-    'requestLanguage' => 'pl',
-    'labelType'       => 'A4',
-    'speditionCode'   => 'GLS',
-    'shipmentType'    => 'WAREHOUSE',
+$courier = CourierFactory::create('Enadawca', [
+    'login'             => 'mylogin',
+    'password'          => 'mypassword',
+    'sandbox'           => true,
+    'packageSize'       => 'XS', //Default: XXL
+    'labelType'         => 'ADDRESS_LABEL', //Default: ADDRESS_LABEL
+    'labelMethod'       => 'EACH_PARCEL_SEPARATELY', //Default: EACH_PARCEL_SEPARATELY
 ]);
 
 /**

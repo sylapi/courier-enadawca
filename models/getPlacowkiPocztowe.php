@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getPlacowkiPocztowe
 {
     /** @var \idWojewodztwoType */

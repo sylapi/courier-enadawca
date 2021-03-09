@@ -1,7 +1,5 @@
 <?php
 
-
-
 class clearEnvelopeByGuidsResponse
 {
     /** @var \errorType */

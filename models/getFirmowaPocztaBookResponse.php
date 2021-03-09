@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getFirmowaPocztaBookResponse
 {
     /** @var base64Binary */

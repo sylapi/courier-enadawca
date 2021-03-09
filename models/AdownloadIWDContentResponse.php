@@ -1,7 +1,5 @@
 <?php
 
-
-
 class AdownloadIWDContentResponse
 {
     /** @var base64Binary */

@@ -1,7 +1,5 @@
 <?php
 
-
-
 class sendEnvelope
 {
     /** @var \urzadNadaniaType */

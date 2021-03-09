@@ -1,7 +1,5 @@
 <?php
 
-
-
 class miejsceOdbioruType
 {
     const NADAWCA = 'NADAWCA';

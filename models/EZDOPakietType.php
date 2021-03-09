@@ -1,7 +1,5 @@
 <?php
 
-
-
 class EZDOPakietType
 {
     /** @var int */

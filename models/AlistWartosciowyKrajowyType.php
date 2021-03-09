@@ -1,10 +1,8 @@
 <?php
 
-
-
 class AlistWartosciowyKrajowyType extends przesylkaRejestrowanaType
 {
-    /** @var boolean */
+    /** @var bool */
     public $posteRestante;
     /** @var \wartoscType */
     public $wartosc;
@@ -18,8 +16,8 @@ class AlistWartosciowyKrajowyType extends przesylkaRejestrowanaType
     public $masa;
     /** @var string */
     public $numerWewnetrznyPrzesylki;
-    /** @var boolean */
+    /** @var bool */
     public $egzemplarzBiblioteczny;
-    /** @var boolean */
+    /** @var bool */
     public $dlaOciemnialych;
 }

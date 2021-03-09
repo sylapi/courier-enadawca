@@ -1,7 +1,5 @@
 <?php
 
-
-
 class AformatType
 {
     const S = 'S';

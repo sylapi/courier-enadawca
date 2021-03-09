@@ -1,7 +1,5 @@
 <?php
 
-
-
 class moveShipmentsResponse
 {
     /** @var \guidType */

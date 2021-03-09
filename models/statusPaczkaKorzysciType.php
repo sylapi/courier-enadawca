@@ -1,7 +1,5 @@
 <?php
 
-
-
 class statusPaczkaKorzysciType
 {
     const ERROR = 'ERROR';

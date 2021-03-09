@@ -1,22 +1,20 @@
 <?php
 
-
-
 class AlistZwyklyFirmowyType extends przesylkaNieRejestrowanaType
 {
     /** @var \adresType */
     public $adres;
-    /** @var boolean */
+    /** @var bool */
     public $posteRestante;
-    /** @var boolean */
+    /** @var bool */
     public $miejscowa;
     /** @var \masaType */
     public $masa;
-    /** @var boolean */
+    /** @var bool */
     public $egzemplarzBiblioteczny;
-    /** @var boolean */
+    /** @var bool */
     public $dlaOciemnialych;
-    /** @var boolean */
+    /** @var bool */
     public $obszarMiasto;
     /** @var \kategoriaType */
     public $kategoria;

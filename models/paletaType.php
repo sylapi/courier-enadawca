@@ -1,7 +1,5 @@
 <?php
 
-
-
 class paletaType
 {
     /** @var \rodzajPaletyType */

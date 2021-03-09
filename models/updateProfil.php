@@ -1,7 +1,5 @@
 <?php
 
-
-
 class updateProfil
 {
     /** @var \profilType */

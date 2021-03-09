@@ -1,7 +1,5 @@
 <?php
 
-
-
 class uiszczaOplateType
 {
     const NADAWCA = 'NADAWCA';

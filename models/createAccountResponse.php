@@ -1,7 +1,5 @@
 <?php
 
-
-
 class createAccountResponse
 {
     /** @var \errorType */

@@ -1,7 +1,5 @@
 <?php
 
-
-
 class addReklamacje
 {
     /** @var \reklamowanaPrzesylkaType */

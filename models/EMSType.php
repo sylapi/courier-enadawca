@@ -1,7 +1,5 @@
 <?php
 
-
-
 class EMSType extends przesylkaRejestrowanaType
 {
     /** @var \ubezpieczenieType */
@@ -12,6 +10,6 @@ class EMSType extends przesylkaRejestrowanaType
     public $typOpakowania;
     /** @var \masaType */
     public $masa;
-    /** @var boolean */
+    /** @var bool */
     public $zalaczoneDokumenty;
 }

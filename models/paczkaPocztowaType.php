@@ -1,14 +1,12 @@
 <?php
 
-
-
 class paczkaPocztowaType extends przesylkaRejestrowanaType
 {
     /** @var \EPOType */
     public $epo;
     /** @var \zasadySpecjalneEnum */
     public $zasadySpecjalne;
-    /** @var boolean */
+    /** @var bool */
     public $posteRestante;
     /** @var \iloscPotwierdzenOdbioruType */
     public $iloscPotwierdzenOdbioru;
@@ -20,10 +18,10 @@ class paczkaPocztowaType extends przesylkaRejestrowanaType
     public $masa;
     /** @var \wartoscType */
     public $wartosc;
-    /** @var boolean */
+    /** @var bool */
     public $zwrotDoslanie;
-    /** @var boolean */
+    /** @var bool */
     public $egzemplarzBiblioteczny;
-    /** @var boolean */
+    /** @var bool */
     public $dlaOciemnialych;
 }

@@ -1,7 +1,5 @@
 <?php
 
-
-
 class eZwrotTypZgodyType
 {
     const ZGODA_BRAK = 'ZGODA_BRAK';

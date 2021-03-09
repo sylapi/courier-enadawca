@@ -1,7 +1,5 @@
 <?php
 
-
-
 class addRozbieznoscDoZapowiedziFakturResponse
 {
     /** @var \errorType */

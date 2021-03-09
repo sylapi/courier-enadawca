@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getAddresLabelCompact
 {
     /** @var int */

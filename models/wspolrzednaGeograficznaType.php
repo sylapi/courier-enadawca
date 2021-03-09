@@ -1,7 +1,5 @@
 <?php
 
-
-
 class wspolrzednaGeograficznaType
 {
     /** @var float */

@@ -1,7 +1,5 @@
 <?php
 
-
-
 class AdownloadIWDContent
 {
     /** @var int */

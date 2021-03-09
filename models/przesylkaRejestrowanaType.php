@@ -1,7 +1,5 @@
 <?php
 
-
-
 class przesylkaRejestrowanaType extends przesylkaType
 {
     /** @var \adresType */

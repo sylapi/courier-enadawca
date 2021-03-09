@@ -1,7 +1,5 @@
 <?php
 
-
-
 class EMSTypOpakowaniaType
 {
     const ZWYKLY = 'ZWYKLY';

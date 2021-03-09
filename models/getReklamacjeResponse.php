@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getReklamacjeResponse
 {
     /** @var \reklamacjaRozpatrzonaType */

@@ -1,7 +1,5 @@
 <?php
 
-
-
 class jednostkaOrganizacyjnaType
 {
     /** @var \accountType */

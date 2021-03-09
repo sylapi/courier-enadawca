@@ -1,7 +1,5 @@
 <?php
 
-
-
 class EPOInfoType
 {
     /** @var \awizoPrzesylkiType */

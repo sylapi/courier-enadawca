@@ -1,10 +1,8 @@
 <?php
 
-
-
 class trasaResponseType
 {
-    /** @var boolean */
+    /** @var bool */
     public $isMiejscowa;
     /** @var \guidType */
     public $guid;

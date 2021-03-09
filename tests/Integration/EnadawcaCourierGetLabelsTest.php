@@ -2,16 +2,16 @@
 
 namespace Sylapi\Courier\Enadawca\Tests\Integration;
 
-use Sylapi\Courier\Entities\Label;
-use Sylapi\Courier\Exceptions\TransportException;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 use Sylapi\Courier\Enadawca\EnadawcaCourierGetLabels;
 use Sylapi\Courier\Enadawca\Tests\Helpers\EnadawcaSessionTrait;
+use Sylapi\Courier\Entities\Label;
+use Sylapi\Courier\Exceptions\TransportException;
 
 class EnadawcaCourierGetLabelsTest extends PHPUnitTestCase
 {
     use EnadawcaSessionTrait;
-    
+
     private $soapMock = null;
     private $sessionMock = null;
 
@@ -20,7 +20,7 @@ class EnadawcaCourierGetLabelsTest extends PHPUnitTestCase
         $this->soapMock = $this->getEnadawcaSoapMock();
         $this->sessionMock = $this->getSessionMock($this->soapMock);
     }
-        
+
     public function testGetLabelsSuccess(): void
     {
         $this->soapMock->expects($this->any())
@@ -28,11 +28,11 @@ class EnadawcaCourierGetLabelsTest extends PHPUnitTestCase
             ->willReturnCallback(function ($methodName) {
                 if ('getPrintForParcel' === $methodName) {
                     return simplexml_load_string(file_get_contents(__DIR__.'/Mock/getPrintForParcelSuccess.xml'));
-                }                
+                }
             });
 
         $getLabel = new EnadawcaCourierGetLabels($this->sessionMock);
-        $response = $getLabel->getLabel((string) rand(1000,9999));
+        $response = $getLabel->getLabel((string) rand(1000, 9999));
 
         $this->assertInstanceOf(Label::class, $response);
         $this->assertEquals('print', (string) $response);
@@ -45,7 +45,7 @@ class EnadawcaCourierGetLabelsTest extends PHPUnitTestCase
             ->willThrowException(new TransportException());
 
         $getLabel = new EnadawcaCourierGetLabels($this->sessionMock);
-        $response = $getLabel->getLabel((string) rand(1000,9999));
+        $response = $getLabel->getLabel((string) rand(1000, 9999));
         $this->assertInstanceOf(Label::class, $response);
         $this->assertTrue($response->hasErrors());
         $this->assertInstanceOf(TransportException::class, $response->getFirstError());

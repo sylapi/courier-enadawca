@@ -1,7 +1,5 @@
 <?php
 
-
-
 class addressLabelContent
 {
     /** @var base64Binary */

@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getPasswordExpiredDateResponse
 {
     /** @var \date */

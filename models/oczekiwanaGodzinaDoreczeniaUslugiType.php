@@ -1,7 +1,5 @@
 <?php
 
-
-
 class oczekiwanaGodzinaDoreczeniaUslugiType
 {
     const DO_08_00 = 'DO 08:00';

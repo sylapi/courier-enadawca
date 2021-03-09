@@ -1,7 +1,5 @@
 <?php
 
-
-
 class powodReklamacjiType
 {
     /** @var \powodSzczegolowyType */

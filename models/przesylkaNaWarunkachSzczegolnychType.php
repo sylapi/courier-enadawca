@@ -1,10 +1,8 @@
 <?php
 
-
-
 class przesylkaNaWarunkachSzczegolnychType extends przesylkaRejestrowanaType
 {
-    /** @var boolean */
+    /** @var bool */
     public $posteRestante;
     /** @var \iloscPotwierdzenOdbioruType */
     public $iloscPotwierdzenOdbioru;

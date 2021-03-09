@@ -1,23 +1,21 @@
 <?php
 
-
-
 class AdoreczenieUslugaKurierskaType
 {
     /** @var \date */
     public $oczekiwanyTerminDoreczenia;
     /** @var \oczekiwanaGodzinaDoreczeniaUslugiType */
     public $oczekiwanaGodzinaDoreczenia;
-    /** @var boolean */
+    /** @var bool */
     public $wSobote;
-    /** @var boolean */
+    /** @var bool */
     public $w90Minut;
-    /** @var boolean */
+    /** @var bool */
     public $wNiedzieleLubSwieto;
-    /** @var boolean */
+    /** @var bool */
     public $doRakWlasnych;
-    /** @var boolean */
+    /** @var bool */
     public $wGodzinachOd20Do7;
-    /** @var boolean */
+    /** @var bool */
     public $po17;
 }

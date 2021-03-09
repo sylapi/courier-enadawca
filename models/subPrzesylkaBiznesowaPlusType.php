@@ -1,7 +1,5 @@
 <?php
 
-
-
 class subPrzesylkaBiznesowaPlusType extends przesylkaType
 {
     /** @var \pobranieType */
@@ -14,7 +12,7 @@ class subPrzesylkaBiznesowaPlusType extends przesylkaType
     public $gabaryt;
     /** @var \wartoscType */
     public $wartosc;
-    /** @var boolean */
+    /** @var bool */
     public $ostroznie;
     /** @var string */
     public $numerPrzesylkiKlienta;

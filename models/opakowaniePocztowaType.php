@@ -1,7 +1,5 @@
 <?php
 
-
-
 class opakowaniePocztowaType
 {
     const PACZKA_DO_POL_KILO = 'PACZKA_DO_POL_KILO';

@@ -1,7 +1,5 @@
 <?php
 
-
-
 class rodzajUbezpieczeniaType
 {
     const STANDARD = 'STANDARD';

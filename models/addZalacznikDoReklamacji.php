@@ -1,7 +1,5 @@
 <?php
 
-
-
 class addZalacznikDoReklamacji
 {
     /** @var string */

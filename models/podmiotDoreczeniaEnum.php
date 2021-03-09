@@ -1,7 +1,5 @@
 <?php
 
-
-
 class podmiotDoreczeniaEnum
 {
     const ADRESAT = 'ADRESAT';

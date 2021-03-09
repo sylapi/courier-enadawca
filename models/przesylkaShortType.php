@@ -1,7 +1,5 @@
 <?php
 
-
-
 class przesylkaShortType
 {
     /** @var \czynnoscUpustowaType */

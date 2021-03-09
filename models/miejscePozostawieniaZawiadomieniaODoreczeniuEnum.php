@@ -1,7 +1,5 @@
 <?php
 
-
-
 class miejscePozostawieniaZawiadomieniaODoreczeniuEnum
 {
     const SKRZYNKA_ADRESATA = 'SKRZYNKA_ADRESATA';

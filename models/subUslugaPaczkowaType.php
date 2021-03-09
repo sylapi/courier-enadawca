@@ -1,7 +1,5 @@
 <?php
 
-
-
 class subUslugaPaczkowaType extends przesylkaType
 {
     /** @var \pobranieType */
@@ -14,11 +12,11 @@ class subUslugaPaczkowaType extends przesylkaType
     public $masa;
     /** @var \wartoscType */
     public $wartosc;
-    /** @var boolean */
+    /** @var bool */
     public $ostroznie;
     /** @var \opakowaniePocztowaType */
     public $opakowanie;
-    /** @var boolean */
+    /** @var bool */
     public $ponadgabaryt;
     /** @var string */
     public $numerPrzesylkiKlienta;

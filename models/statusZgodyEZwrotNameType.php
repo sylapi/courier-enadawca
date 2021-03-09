@@ -1,7 +1,5 @@
 <?php
 
-
-
 class statusZgodyEZwrotNameType
 {
     const NOWY = 'NOWY';

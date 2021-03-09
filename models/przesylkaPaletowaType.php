@@ -1,7 +1,5 @@
 <?php
 
-
-
 class przesylkaPaletowaType extends przesylkaRejestrowanaType
 {
     /** @var \adresType */
@@ -48,22 +46,22 @@ class przesylkaPaletowaType extends przesylkaRejestrowanaType
     public $powiadomienieNadawcy;
     /** @var \eSposobPowiadomieniaType */
     public $powiadomienieOdbiorcy;
-    /** @var boolean */
+    /** @var bool */
     public $dostawaWSobote;
-    /** @var boolean */
+    /** @var bool */
     public $przygotowanieDokumentowPrzewozowych;
-    /** @var boolean */
+    /** @var bool */
     public $dostawaSamochodemDedykowanym;
-    /** @var boolean */
+    /** @var bool */
     public $zmianaDanychAdresowych;
-    /** @var boolean */
+    /** @var bool */
     public $ustalenieTerminuDostawy;
-    /** @var boolean */
+    /** @var bool */
     public $samochodZWinda;
-    /** @var boolean */
+    /** @var bool */
     public $zabranieOpakowania;
-    /** @var boolean */
+    /** @var bool */
     public $wniesienie;
-    /** @var boolean */
+    /** @var bool */
     public $awizoSMS;
 }

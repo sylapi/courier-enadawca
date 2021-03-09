@@ -1,7 +1,5 @@
 <?php
 
-
-
 class uploadIWDContent
 {
     /** @var \urzadNadaniaType */

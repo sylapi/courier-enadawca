@@ -1,7 +1,5 @@
 <?php
 
-
-
 class pobranieType
 {
     /** @var \sposobPobraniaType */
@@ -12,6 +10,6 @@ class pobranieType
     public $nrb;
     /** @var \anonymous56 */
     public $tytulem;
-    /** @var boolean */
+    /** @var bool */
     public $sprawdzenieZawartosciPrzesylkiPrzezOdbiorce;
 }

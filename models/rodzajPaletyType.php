@@ -1,7 +1,5 @@
 <?php
 
-
-
 class rodzajPaletyType
 {
     const EUR = 'EUR';

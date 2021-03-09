@@ -1,7 +1,5 @@
 <?php
 
-
-
 class zasadySpecjalneEnum
 {
     const ADMINISTRACYJNA = 'ADMINISTRACYJNA';

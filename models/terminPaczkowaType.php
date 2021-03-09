@@ -1,7 +1,5 @@
 <?php
 
-
-
 class terminPaczkowaType
 {
     const PACZKA_24 = 'PACZKA_24';

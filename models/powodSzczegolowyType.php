@@ -1,7 +1,5 @@
 <?php
 
-
-
 class powodSzczegolowyType
 {
     /** @var int */

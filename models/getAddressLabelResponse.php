@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getAddressLabelResponse
 {
     /** @var \addressLabelContent */

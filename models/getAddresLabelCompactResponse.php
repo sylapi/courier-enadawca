@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getAddresLabelCompactResponse
 {
     /** @var base64Binary */

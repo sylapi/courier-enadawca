@@ -1,7 +1,5 @@
 <?php
 
-
-
 class hello
 {
     /** @var string */

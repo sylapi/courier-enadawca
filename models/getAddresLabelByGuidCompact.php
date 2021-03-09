@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getAddresLabelByGuidCompact
 {
     /** @var \guidType */

@@ -1,7 +1,5 @@
 <?php
 
-
-
 class profilType extends adresType
 {
     /** @var int */

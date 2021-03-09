@@ -1,7 +1,5 @@
 <?php
 
-
-
 class statusType
 {
     const NIEPOTWIERDZONA = 'NIEPOTWIERDZONA';

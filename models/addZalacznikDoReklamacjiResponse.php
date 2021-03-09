@@ -1,7 +1,5 @@
 <?php
 
-
-
 class addZalacznikDoReklamacjiResponse
 {
     /** @var \errorType */

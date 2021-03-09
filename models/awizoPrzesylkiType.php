@@ -1,7 +1,5 @@
 <?php
 
-
-
 class awizoPrzesylkiType
 {
     /** @var \date */

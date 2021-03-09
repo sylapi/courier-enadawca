@@ -1,7 +1,5 @@
 <?php
 
-
-
 class setEnvelopeBuforDataNadania
 {
     /** @var \date */

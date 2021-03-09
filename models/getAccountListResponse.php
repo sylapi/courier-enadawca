@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getAccountListResponse
 {
     /** @var \accountType */

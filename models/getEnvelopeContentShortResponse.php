@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getEnvelopeContentShortResponse
 {
     /** @var \przesylkaShortType */

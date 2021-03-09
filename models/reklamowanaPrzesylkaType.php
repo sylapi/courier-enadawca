@@ -1,7 +1,5 @@
 <?php
 
-
-
 class reklamowanaPrzesylkaType
 {
     /** @var \przesylkaType */

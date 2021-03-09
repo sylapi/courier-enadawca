@@ -1,7 +1,5 @@
 <?php
 
-
-
 class przyczynaZwrotuEnum
 {
     const ODMOWA = 'ODMOWA';

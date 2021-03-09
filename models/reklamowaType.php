@@ -1,7 +1,5 @@
 <?php
 
-
-
 class reklamowaType extends przesylkaNieRejestrowanaType
 {
     /** @var \masaType */

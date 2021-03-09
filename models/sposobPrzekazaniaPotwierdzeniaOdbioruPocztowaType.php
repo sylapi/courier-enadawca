@@ -1,7 +1,5 @@
 <?php
 
-
-
 class sposobPrzekazaniaPotwierdzeniaOdbioruPocztowaType
 {
     const EKSPRES24 = 'EKSPRES24';

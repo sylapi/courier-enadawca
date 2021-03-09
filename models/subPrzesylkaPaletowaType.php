@@ -1,7 +1,5 @@
 <?php
 
-
-
 class subPrzesylkaPaletowaType extends przesylkaType
 {
     /** @var \paletaType */

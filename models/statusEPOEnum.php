@@ -1,7 +1,5 @@
 <?php
 
-
-
 class statusEPOEnum
 {
     const ERROR = 'ERROR';

@@ -1,7 +1,5 @@
 <?php
 
-
-
 class rozstrzygniecieType
 {
     const UZASADNIONA = 'UZASADNIONA';

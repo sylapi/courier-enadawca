@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getPlacowkiPocztoweResponse
 {
     /** @var \placowkaPocztowaType */

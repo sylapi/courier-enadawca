@@ -1,7 +1,5 @@
 <?php
 
-
-
 class oczekujeNaZgodeEZwrotType
 {
     /** @var \shopEZwrotyType */

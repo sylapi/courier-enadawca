@@ -1,7 +1,5 @@
 <?php
 
-
-
 class wyslijLinkaOStatusieEZwrotuResponse
 {
     /** @var \errorType */

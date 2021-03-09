@@ -1,7 +1,5 @@
 <?php
 
-
-
 class obszarAdresowyType
 {
     /** @var \kodPocztowyType */

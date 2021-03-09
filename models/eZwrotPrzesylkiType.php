@@ -1,7 +1,5 @@
 <?php
 
-
-
 class eZwrotPrzesylkiType
 {
     const ZWROTPACZKA48 = 'ZWROTPACZKA48';

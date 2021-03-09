@@ -1,7 +1,5 @@
 <?php
 
-
-
 class addReklamacjeResponse
 {
     /** @var \errorType */

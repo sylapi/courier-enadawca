@@ -1,10 +1,8 @@
 <?php
 
-
-
 class rodzajListType
 {
-    /** @var boolean */
+    /** @var bool */
     public $polecony;
     /** @var \kategoriaType */
     public $kategoria;

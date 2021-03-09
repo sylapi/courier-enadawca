@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getBlankietPobraniaByGuidsResponse
 {
     /** @var \addressLabelContent */

@@ -1,7 +1,5 @@
 <?php
 
-
-
 class ePrzesylkaType extends przesylkaRejestrowanaType
 {
     /** @var \urzadWydaniaEPrzesylkiType */
@@ -18,7 +16,7 @@ class ePrzesylkaType extends przesylkaRejestrowanaType
     public $eKontaktAdresata;
     /** @var \eKontaktType */
     public $eKontaktNadawcy;
-    /** @var boolean */
+    /** @var bool */
     public $ostroznie;
     /** @var \wartoscType */
     public $wartosc;

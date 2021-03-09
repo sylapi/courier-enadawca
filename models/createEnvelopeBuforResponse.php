@@ -1,7 +1,5 @@
 <?php
 
-
-
 class createEnvelopeBuforResponse
 {
     /** @var \buforType */

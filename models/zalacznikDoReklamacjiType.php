@@ -1,7 +1,5 @@
 <?php
 
-
-
 class zalacznikDoReklamacjiType
 {
     /** @var base64Binary */

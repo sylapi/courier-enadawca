@@ -1,7 +1,5 @@
 <?php
 
-
-
 class envelopeInfoType
 {
     /** @var \errorType */

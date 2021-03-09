@@ -1,7 +1,5 @@
 <?php
 
-
-
 class terminRodzajPlusType
 {
     const PORANEK = 'PORANEK';

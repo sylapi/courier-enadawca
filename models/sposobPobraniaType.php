@@ -1,7 +1,5 @@
 <?php
 
-
-
 class sposobPobraniaType
 {
     const PRZEKAZ = 'PRZEKAZ';

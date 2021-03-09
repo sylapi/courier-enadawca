@@ -1,7 +1,5 @@
 <?php
 
-
-
 class eSposobPowiadomieniaType
 {
     const SMS = 'SMS';

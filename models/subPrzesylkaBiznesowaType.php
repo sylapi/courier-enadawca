@@ -1,7 +1,5 @@
 <?php
 
-
-
 class subPrzesylkaBiznesowaType extends przesylkaType
 {
     /** @var \ubezpieczenieType */
@@ -14,6 +12,6 @@ class subPrzesylkaBiznesowaType extends przesylkaType
     public $gabaryt;
     /** @var \wartoscType */
     public $wartosc;
-    /** @var boolean */
+    /** @var bool */
     public $ostroznie;
 }

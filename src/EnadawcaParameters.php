@@ -8,7 +8,6 @@ use ArrayObject;
 
 class EnadawcaParameters extends ArrayObject
 {
-
     /**
      * @param array<string, mixed> $parameters
      */

@@ -2,16 +2,16 @@
 
 namespace Sylapi\Courier\Enadawca\Tests\Integration;
 
-use Sylapi\Courier\Entities\Status;
-use Sylapi\Courier\Exceptions\TransportException;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
 use Sylapi\Courier\Enadawca\EnadawcaCourierGetStatuses;
 use Sylapi\Courier\Enadawca\Tests\Helpers\EnadawcaSessionTrait;
+use Sylapi\Courier\Entities\Status;
+use Sylapi\Courier\Exceptions\TransportException;
 
 class EnadawcaCourierGetStatusesTest extends PHPUnitTestCase
 {
     use EnadawcaSessionTrait;
-    
+
     private $soapMock = null;
     private $sessionMock = null;
 
@@ -28,11 +28,11 @@ class EnadawcaCourierGetStatusesTest extends PHPUnitTestCase
             ->willReturnCallback(function ($methodName) {
                 if ('sprawdzPrzesylkePl' === $methodName) {
                     return simplexml_load_string(file_get_contents(__DIR__.'/Mock/sprawdzPrzesylkePlSuccess.xml'));
-                }                
+                }
             });
-        
+
         $getStatus = new EnadawcaCourierGetStatuses($this->sessionMock);
-        $trackingId = (string) rand(1000,9999);
+        $trackingId = (string) rand(1000, 9999);
         $response = $getStatus->getStatus($trackingId);
         $this->assertInstanceOf(Status::class, $response);
         $this->assertTrue(true);
@@ -45,10 +45,10 @@ class EnadawcaCourierGetStatusesTest extends PHPUnitTestCase
         ->willReturnCallback(function ($methodName) {
             if ('sprawdzPrzesylkePl' === $methodName) {
                 return simplexml_load_string(file_get_contents(__DIR__.'/Mock/sprawdzPrzesylkePlFailure.xml'));
-            }                
-        });    
+            }
+        });
         $getStatus = new EnadawcaCourierGetStatuses($this->sessionMock);
-        $trackingId = (string) rand(1000,9999);
+        $trackingId = (string) rand(1000, 9999);
         $response = $getStatus->getStatus($trackingId);
         $this->assertInstanceOf(Status::class, $response);
         $this->assertTrue($response->hasErrors());

@@ -1,7 +1,5 @@
 <?php
 
-
-
 class permisionType
 {
     const MANAGE_USERS = 'MANAGE_USERS';

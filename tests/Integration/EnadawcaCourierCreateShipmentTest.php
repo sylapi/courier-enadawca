@@ -2,20 +2,20 @@
 
 namespace Sylapi\Courier\Enadawca\Tests\Integration;
 
-use Sylapi\Courier\Contracts\Response;
-use Sylapi\Courier\Enadawca\EnadawcaParcel;
-use Sylapi\Courier\Enadawca\EnadawcaSender;
-use Sylapi\Courier\Enadawca\EnadawcaReceiver;
-use Sylapi\Courier\Enadawca\EnadawcaShipment;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
+use Sylapi\Courier\Contracts\Response;
 use Sylapi\Courier\Enadawca\EnadawcaCourierCreateShipment;
+use Sylapi\Courier\Enadawca\EnadawcaParcel;
+use Sylapi\Courier\Enadawca\EnadawcaReceiver;
+use Sylapi\Courier\Enadawca\EnadawcaSender;
+use Sylapi\Courier\Enadawca\EnadawcaShipment;
 use Sylapi\Courier\Enadawca\Tests\Helpers\EnadawcaSessionTrait;
 use Sylapi\Courier\Exceptions\TransportException;
 
 class EnadawcaCourierCreateShipmentTest extends PHPUnitTestCase
 {
     use EnadawcaSessionTrait;
-    
+
     private $soapMock = null;
     private $sessionMock = null;
 
@@ -42,7 +42,7 @@ class EnadawcaCourierCreateShipmentTest extends PHPUnitTestCase
                 ->willReturn($parcelMock);
 
         return $shipmentMock;
-    }    
+    }
 
     public function testCreateShipmentSuccess(): void
     {
@@ -57,7 +57,7 @@ class EnadawcaCourierCreateShipmentTest extends PHPUnitTestCase
                 }
                 if ('addShipment' === $methodName) {
                     return simplexml_load_string(file_get_contents(__DIR__.'/Mock/addShippmentSuccess.xml'));
-                }                
+                }
             });
 
         $createShipment = new EnadawcaCourierCreateShipment($this->sessionMock);
@@ -70,7 +70,6 @@ class EnadawcaCourierCreateShipmentTest extends PHPUnitTestCase
 
     public function testCreateShipmentFailure(): void
     {
-        
         $this->soapMock->expects($this->any())
             ->method('call')
             ->willThrowException(new TransportException());

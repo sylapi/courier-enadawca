@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getZapowiedziFaktur
 {
     /** @var \date */

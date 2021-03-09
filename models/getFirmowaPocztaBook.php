@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getFirmowaPocztaBook
 {
     /** @var int */

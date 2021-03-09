@@ -1,12 +1,10 @@
 <?php
 
-
-
 class zwrotType
 {
     /** @var int */
     public $zwrotPoLiczbieDni;
-    /** @var boolean */
+    /** @var bool */
     public $traktowacJakPorzucona;
     /** @var \sposobZwrotuType */
     public $sposobZwrotu;

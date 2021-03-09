@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getWplatyCKP
 {
     /** @var \numerNadaniaType */

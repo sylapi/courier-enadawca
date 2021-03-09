@@ -1,7 +1,5 @@
 <?php
 
-
-
 class idWojewodztwoType
 {
     const value_02 = '02';

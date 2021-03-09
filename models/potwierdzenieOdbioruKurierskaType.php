@@ -1,7 +1,5 @@
 <?php
 
-
-
 class potwierdzenieOdbioruKurierskaType
 {
     /** @var \iloscPotwierdzenOdbioruType */

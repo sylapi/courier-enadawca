@@ -26,7 +26,7 @@ trait EnadawcaSessionTrait
     {
         $parameters = EnadawcaParameters::create([
             'packageSize' => 'XL',
-            'labelType' => 'ADDRESS_LABEL',
+            'labelType'   => 'ADDRESS_LABEL',
             'labelMethod' => 'EACH_PARCEL_SEPARATELY',
         ]);
 

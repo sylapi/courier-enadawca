@@ -1,10 +1,8 @@
 <?php
 
-
-
 class paczkaPocztowaPLUSType extends przesylkaRejestrowanaType
 {
-    /** @var boolean */
+    /** @var bool */
     public $posteRestante;
     /** @var \iloscPotwierdzenOdbioruType */
     public $iloscPotwierdzenOdbioru;
@@ -16,6 +14,6 @@ class paczkaPocztowaPLUSType extends przesylkaRejestrowanaType
     public $wartosc;
     /** @var \masaType */
     public $masa;
-    /** @var boolean */
+    /** @var bool */
     public $zwrotDoslanie;
 }

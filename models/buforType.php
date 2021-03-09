@@ -1,7 +1,5 @@
 <?php
 
-
-
 class buforType
 {
     /** @var \profilType */
@@ -12,10 +10,10 @@ class buforType
     public $dataNadania;
     /** @var \urzadNadaniaType */
     public $urzadNadania;
-    /** @var boolean */
+    /** @var bool */
     public $active;
     /** @var string */
     public $opis;
-    /** @var boolean */
+    /** @var bool */
     public $aktualizujPlanowanaDateNadaniaPrzesylek;
 }

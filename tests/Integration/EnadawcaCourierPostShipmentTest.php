@@ -2,17 +2,17 @@
 
 namespace Sylapi\Courier\Enadawca\Tests\Integration;
 
-use Sylapi\Courier\Contracts\Booking;
-use Sylapi\Courier\Entities\Response;
-use Sylapi\Courier\Exceptions\TransportException;
 use PHPUnit\Framework\TestCase as PHPUnitTestCase;
+use Sylapi\Courier\Contracts\Booking;
 use Sylapi\Courier\Enadawca\EnadawcaCourierPostShipment;
 use Sylapi\Courier\Enadawca\Tests\Helpers\EnadawcaSessionTrait;
+use Sylapi\Courier\Entities\Response;
+use Sylapi\Courier\Exceptions\TransportException;
 
 class EnadawcaCourierPostShipmentTest extends PHPUnitTestCase
 {
     use EnadawcaSessionTrait;
-    
+
     private $soapMock = null;
     private $sessionMock = null;
 
@@ -21,6 +21,7 @@ class EnadawcaCourierPostShipmentTest extends PHPUnitTestCase
         $booking = $this->createMock(Booking::class);
         $booking->method('getShipmentId')
             ->willReturn($shipmentId);
+
         return $booking;
     }
 
@@ -37,11 +38,11 @@ class EnadawcaCourierPostShipmentTest extends PHPUnitTestCase
         ->willReturnCallback(function ($methodName) {
             if ('sendEnvelope' === $methodName) {
                 return simplexml_load_string(file_get_contents(__DIR__.'/Mock/sendEnvelopeSuccess.xml'));
-            }                
+            }
         });
 
         $postShipment = new EnadawcaCourierPostShipment($this->sessionMock);
-        $shipmentId = (string) rand(1000,9999);
+        $shipmentId = (string) rand(1000, 9999);
         $booking = $this->getBookingMock($shipmentId);
         $response = $postShipment->postShipment($booking);
 
@@ -56,9 +57,8 @@ class EnadawcaCourierPostShipmentTest extends PHPUnitTestCase
             ->method('call')
             ->willThrowException(new TransportException());
 
-
         $postShipment = new EnadawcaCourierPostShipment($this->sessionMock);
-        $shipmentId = (string) rand(1000,9999);
+        $shipmentId = (string) rand(1000, 9999);
         $booking = $this->getBookingMock($shipmentId);
         $response = $postShipment->postShipment($booking);
 

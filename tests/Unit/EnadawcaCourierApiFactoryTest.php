@@ -22,7 +22,7 @@ class EnadawcaCourierApiFactoryTest extends PHPUnitTestCase
     private $parameters = [
         'login'           => 'login',
         'password'        => 'password',
-        'sandbox'         => true
+        'sandbox'         => true,
     ];
 
     public function testEnadawcaSessionFactory(): void

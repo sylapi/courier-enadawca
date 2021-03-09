@@ -1,7 +1,5 @@
 <?php
 
-
-
 class gabarytBiznesowaType
 {
     const XS = 'XS';

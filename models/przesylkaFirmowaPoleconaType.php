@@ -1,22 +1,20 @@
 <?php
 
-
-
 class przesylkaFirmowaPoleconaType extends przesylkaRejestrowanaType
 {
     /** @var \EPOType */
     public $epo;
     /** @var \zasadySpecjalneEnum */
     public $zasadySpecjalne;
-    /** @var boolean */
+    /** @var bool */
     public $posteRestante;
     /** @var \iloscPotwierdzenOdbioruType */
     public $iloscPotwierdzenOdbioru;
     /** @var \masaType */
     public $masa;
-    /** @var boolean */
+    /** @var bool */
     public $miejscowa;
-    /** @var boolean */
+    /** @var bool */
     public $obszarMiasto;
     /** @var \kategoriaType */
     public $kategoria;

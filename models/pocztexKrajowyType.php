@@ -1,7 +1,5 @@
 <?php
 
-
-
 class pocztexKrajowyType extends przesylkaRejestrowanaType
 {
     /** @var \pobranieType */
@@ -18,19 +16,19 @@ class pocztexKrajowyType extends przesylkaRejestrowanaType
     public $potwierdzenieDoreczenia;
     /** @var \ubezpieczenieType */
     public $ubezpieczenie;
-    /** @var boolean */
+    /** @var bool */
     public $posteRestante;
     /** @var \terminRodzajType */
     public $terminRodzaj;
-    /** @var boolean */
+    /** @var bool */
     public $kopertaFirmowa;
     /** @var \masaType */
     public $masa;
     /** @var \wartoscType */
     public $wartosc;
-    /** @var boolean */
+    /** @var bool */
     public $ostroznie;
-    /** @var boolean */
+    /** @var bool */
     public $ponadgabaryt;
     /** @var \uiszczaOplateType */
     public $uiszczaOplate;
@@ -38,6 +36,6 @@ class pocztexKrajowyType extends przesylkaRejestrowanaType
     public $odleglosc;
     /** @var string */
     public $zawartosc;
-    /** @var boolean */
+    /** @var bool */
     public $sprawdzenieZawartosciPrzesylkiPrzezOdbiorce;
 }

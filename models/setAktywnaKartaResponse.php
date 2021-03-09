@@ -1,7 +1,5 @@
 <?php
 
-
-
 class setAktywnaKartaResponse
 {
     /** @var \errorType */

@@ -1,7 +1,5 @@
 <?php
 
-
-
 class AglobalExpresType extends przesylkaRejestrowanaType
 {
     /** @var \ubezpieczenieType */
@@ -10,7 +8,7 @@ class AglobalExpresType extends przesylkaRejestrowanaType
     public $potwierdzenieDoreczenia;
     /** @var \masaType */
     public $masa;
-    /** @var boolean */
+    /** @var bool */
     public $posteRestante;
     /** @var string */
     public $zawartosc;

@@ -1,7 +1,5 @@
 <?php
 
-
-
 class infoPaczkaKorzysciType
 {
     /** @var int */

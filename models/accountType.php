@@ -1,7 +1,5 @@
 <?php
 
-
-
 class accountType
 {
     /** @var \kartaType */

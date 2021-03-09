@@ -1,7 +1,5 @@
 <?php
 
-
-
 class cancelReklamacja
 {
     /** @var int */

@@ -1,10 +1,8 @@
 <?php
 
-
-
 class przesylkaPoleconaZagranicznaType extends przesylkaRejestrowanaType
 {
-    /** @var boolean */
+    /** @var bool */
     public $posteRestante;
     /** @var \masaType */
     public $masa;

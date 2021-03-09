@@ -1,7 +1,5 @@
 <?php
 
-
-
 class typOpakowanieType
 {
     const KL1 = 'KL1';

@@ -57,7 +57,7 @@ try {
     } else {
         var_dump($response->referenceId); // Utworzony wewnetrzny idetyfikator zamowienia
         var_dump($response->shipmentId); // Zewnetrzny idetyfikator zamowienia
-        var_dump($response->trackingId); // Zewnetrzny idetyfikator sledzenia przesylki        
+        var_dump($response->trackingId); // Zewnetrzny idetyfikator sledzenia przesylki
     }
 } catch (\Exception $e) {
     var_dump($e->getMessage());

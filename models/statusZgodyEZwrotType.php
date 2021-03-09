@@ -1,7 +1,5 @@
 <?php
 
-
-
 class statusZgodyEZwrotType
 {
     /** @var \eZwrotPrzesylkiType */
@@ -10,7 +8,7 @@ class statusZgodyEZwrotType
     public $guidZgodaEZwrot;
     /** @var \statusZgodyEZwrotNameType */
     public $status;
-    /** @var boolean */
+    /** @var bool */
     public $platnoscZaPrzesylke;
     /** @var int */
     public $kosztKontrahenta;

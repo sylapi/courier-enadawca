@@ -1,7 +1,5 @@
 <?php
 
-
-
 class updateShopEZwrotyResponse
 {
     /** @var \errorType */

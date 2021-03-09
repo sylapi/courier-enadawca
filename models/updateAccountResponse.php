@@ -1,7 +1,5 @@
 <?php
 
-
-
 class updateAccountResponse
 {
     /** @var \errorType */

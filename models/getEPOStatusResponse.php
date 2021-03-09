@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getEPOStatusResponse
 {
     /** @var \przesylkaEPOType */

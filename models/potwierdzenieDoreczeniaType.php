@@ -1,7 +1,5 @@
 <?php
 
-
-
 class potwierdzenieDoreczeniaType
 {
     /** @var \sposobDoreczeniaPotwierdzeniaType */

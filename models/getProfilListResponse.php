@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getProfilListResponse
 {
     /** @var \profilType */

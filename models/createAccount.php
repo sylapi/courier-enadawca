@@ -1,7 +1,5 @@
 <?php
 
-
-
 class createAccount
 {
     /** @var \accountType */

@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getEZDOResponse
 {
     /** @var \adresType */

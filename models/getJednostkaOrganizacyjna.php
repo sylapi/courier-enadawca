@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getJednostkaOrganizacyjna
 {
     /** @var \jednostkaOrganizacyjnaType */

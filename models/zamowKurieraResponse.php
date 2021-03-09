@@ -1,7 +1,5 @@
 <?php
 
-
-
 class zamowKurieraResponse
 {
     /** @var \errorType */

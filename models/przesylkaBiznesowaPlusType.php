@@ -1,7 +1,5 @@
 <?php
 
-
-
 class przesylkaBiznesowaPlusType extends przesylkaRejestrowanaType
 {
     /** @var \pobranieType */
@@ -14,7 +12,7 @@ class przesylkaBiznesowaPlusType extends przesylkaRejestrowanaType
     public $dataDrugiejProbyDoreczenia;
     /** @var int */
     public $drugaProbaDoreczeniaPoLiczbieDni;
-    /** @var boolean */
+    /** @var bool */
     public $posteRestante;
     /** @var \masaType */
     public $masa;
@@ -24,13 +22,13 @@ class przesylkaBiznesowaPlusType extends przesylkaRejestrowanaType
     public $wartosc;
     /** @var \kwotaTranzakcjiType */
     public $kwotaTranzakcji;
-    /** @var boolean */
+    /** @var bool */
     public $ostroznie;
     /** @var \kategoriaType */
     public $kategoria;
     /** @var \iloscPotwierdzenOdbioruType */
     public $iloscPotwierdzenOdbioru;
-    /** @var boolean */
+    /** @var bool */
     public $zwrotDoslanie;
     /** @var \eKontaktType */
     public $eKontaktAdresata;

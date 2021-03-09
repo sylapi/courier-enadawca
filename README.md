@@ -1,6 +1,6 @@
 # Courier-enadawca
 
-![StyleCI](https://github.styleci.io/repos/261400599/shield?style=flat&style=flat) ![PHPStan](https://img.shields.io/badge/PHPStan-level%205-brightgreen.svg?style=flat) [![Build](https://github.com/sylapi/courier-enadawca/actions/workflows/build.yaml/badge.svg?event=push)](https://github.com/sylapi/courier-enadawca/actions/workflows/build.yaml) [![codecov.io](https://codecov.io/github/sylapi/courier-enadawca/coverage.svg)](https://codecov.io/github/sylapi/courier-enadawca/)
+![StyleCI](https://github.styleci.io/repos/240472903/shield?style=flat&style=flat) ![PHPStan](https://img.shields.io/badge/PHPStan-level%205-brightgreen.svg?style=flat) [![Build](https://github.com/sylapi/courier-enadawca/actions/workflows/build.yaml/badge.svg?event=push)](https://github.com/sylapi/courier-enadawca/actions/workflows/build.yaml) [![codecov.io](https://codecov.io/github/sylapi/courier-enadawca/coverage.svg)](https://codecov.io/github/sylapi/courier-enadawca/)
 
 ## Methody
 

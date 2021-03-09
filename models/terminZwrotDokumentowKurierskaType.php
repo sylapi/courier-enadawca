@@ -1,7 +1,5 @@
 <?php
 
-
-
 class terminZwrotDokumentowKurierskaType
 {
     const MIEJSKI_DO_3H_DO_5KM = 'MIEJSKI_DO_3H_DO_5KM';

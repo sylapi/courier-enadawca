@@ -1,7 +1,5 @@
 <?php
 
-
-
 class gabarytType
 {
     const GABARYT_A = 'GABARYT_A';

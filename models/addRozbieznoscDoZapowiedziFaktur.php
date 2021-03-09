@@ -1,7 +1,5 @@
 <?php
 
-
-
 class addRozbieznoscDoZapowiedziFaktur
 {
     /** @var base64Binary */

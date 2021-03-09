@@ -1,15 +1,13 @@
 <?php
 
-
-
 class getEPOStatus
 {
     /** @var \guidType */
     public $guid;
-    /** @var boolean */
+    /** @var bool */
     public $endedOnly;
     /** @var int */
     public $idEnvelope;
-    /** @var boolean */
+    /** @var bool */
     public $withBioepo;
 }

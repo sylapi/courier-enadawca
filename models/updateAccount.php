@@ -1,7 +1,5 @@
 <?php
 
-
-
 class updateAccount
 {
     /** @var \accountType */

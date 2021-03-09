@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getPaczkaKorzysciInfoResponse
 {
     /** @var \statusPaczkaKorzysciType */

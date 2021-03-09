@@ -1,7 +1,5 @@
 <?php
 
-
-
 class opakowanieType
 {
     /** @var \guidType */

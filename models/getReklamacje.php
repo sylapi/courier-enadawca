@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getReklamacje
 {
     /** @var \date */

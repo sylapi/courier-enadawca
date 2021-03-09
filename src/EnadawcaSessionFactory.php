@@ -4,7 +4,6 @@ declare(strict_types=1);
 
 namespace Sylapi\Courier\Enadawca;
 
-
 class EnadawcaSessionFactory
 {
     private $sessions = [];
@@ -25,7 +24,6 @@ class EnadawcaSessionFactory
     const PACKAGE_SIZE_DEFAULT = 'XXL';
     const LABEL_TYPE = 'ADDRESS_LABEL';
     const LABEL_METHOD = 'EACH_PARCEL_SEPARATELY';
-
 
     public function session(EnadawcaParameters $parameters): EnadawcaSession
     {

@@ -1,7 +1,5 @@
 <?php
 
-
-
 class ubezpieczenieType
 {
     /** @var \rodzajUbezpieczeniaType */

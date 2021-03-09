@@ -1,10 +1,8 @@
 <?php
 
-
-
 class obszarAdresowyResponseType
 {
-    /** @var boolean */
+    /** @var bool */
     public $isObszarMiasto;
     /** @var \guidType */
     public $guid;

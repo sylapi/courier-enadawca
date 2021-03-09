@@ -1,14 +1,12 @@
 <?php
 
-
-
 class przesylkaPoleconaKrajowaType extends przesylkaRejestrowanaType
 {
     /** @var \EPOType */
     public $epo;
     /** @var \zasadySpecjalneEnum */
     public $zasadySpecjalne;
-    /** @var boolean */
+    /** @var bool */
     public $posteRestante;
     /** @var \iloscPotwierdzenOdbioruType */
     public $iloscPotwierdzenOdbioru;
@@ -20,12 +18,12 @@ class przesylkaPoleconaKrajowaType extends przesylkaRejestrowanaType
     public $format;
     /** @var \masaType */
     public $masa;
-    /** @var boolean */
+    /** @var bool */
     public $egzemplarzBiblioteczny;
-    /** @var boolean */
+    /** @var bool */
     public $dlaOciemnialych;
-    /** @var boolean */
+    /** @var bool */
     public $obszarMiasto;
-    /** @var boolean */
+    /** @var bool */
     public $miejscowa;
 }

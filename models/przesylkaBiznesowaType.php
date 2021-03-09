@@ -19,7 +19,7 @@ class przesylkaBiznesowaType extends przesylkaRejestrowanaType
     public $gabaryt;
     /** @var \wartoscType */
     public $wartosc;
-    /** @var boolean */
+    /** @var bool */
     public $ostroznie;
     /** @var \numerTransakcjiOdbioruType */
     public $numerTransakcjiOdbioru;

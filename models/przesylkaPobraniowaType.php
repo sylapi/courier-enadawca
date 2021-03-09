@@ -1,12 +1,10 @@
 <?php
 
-
-
 class przesylkaPobraniowaType extends przesylkaRejestrowanaType
 {
     /** @var \pobranieType */
     public $pobranie;
-    /** @var boolean */
+    /** @var bool */
     public $posteRestante;
     /** @var \iloscPotwierdzenOdbioruType */
     public $iloscPotwierdzenOdbioru;
@@ -14,7 +12,7 @@ class przesylkaPobraniowaType extends przesylkaRejestrowanaType
     public $kategoria;
     /** @var \gabarytType */
     public $gabaryt;
-    /** @var boolean */
+    /** @var bool */
     public $ostroznie;
     /** @var \wartoscType */
     public $wartosc;

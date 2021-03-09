@@ -1,7 +1,5 @@
 <?php
 
-
-
 class setStatusZgodyNaEZwrot
 {
     /** @var \statusZgodyEZwrotType */

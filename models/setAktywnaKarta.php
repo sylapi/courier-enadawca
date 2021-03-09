@@ -1,7 +1,5 @@
 <?php
 
-
-
 class setAktywnaKarta
 {
     /** @var int */

@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getKierunkiResponse
 {
     /** @var \kierunekType */

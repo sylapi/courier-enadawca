@@ -1,22 +1,20 @@
 <?php
 
-
-
 class deklaracjaCelnaType
 {
     /** @var \szczegolyDeklaracjiCelnejType */
     public $szczegoly;
-    /** @var boolean */
+    /** @var bool */
     public $podarunek;
-    /** @var boolean */
+    /** @var bool */
     public $dokument;
-    /** @var boolean */
+    /** @var bool */
     public $probkaHandlowa;
-    /** @var boolean */
+    /** @var bool */
     public $zwrotTowaru;
-    /** @var boolean */
+    /** @var bool */
     public $towary;
-    /** @var boolean */
+    /** @var bool */
     public $inny;
     /** @var string */
     public $wyjasnienie;

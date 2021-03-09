@@ -1,7 +1,5 @@
 <?php
 
-
-
 class zwrotDokumentowPaczkowaType
 {
     const EKSPRES24 = 'EKSPRES24';

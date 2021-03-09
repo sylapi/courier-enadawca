@@ -1,7 +1,5 @@
 <?php
 
-
-
 class daneSentType
 {
     /** @var string */
@@ -14,6 +12,6 @@ class daneSentType
     public $kodPKWiU;
     /** @var decimal */
     public $masa;
-    /** @var boolean */
+    /** @var bool */
     public $proceduraAwaryjna;
 }

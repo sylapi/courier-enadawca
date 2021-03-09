@@ -1,7 +1,5 @@
 <?php
 
-
-
 class relatedToAllegroChannelType
 {
     const MS = 'MS';

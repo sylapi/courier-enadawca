@@ -1,16 +1,16 @@
 <?php
+
 declare(strict_types=1);
 
 namespace Sylapi\Courier\Enadawca;
 
 use sendEnvelope;
 use Sylapi\Courier\Contracts\Booking;
-use Sylapi\Courier\Entities\Response;
-use Sylapi\Courier\Helpers\ResponseHelper;
 use Sylapi\Courier\Contracts\CourierPostShipment;
-use Sylapi\Courier\Exceptions\TransportException;
 use Sylapi\Courier\Contracts\Response as ResponseContract;
-
+use Sylapi\Courier\Entities\Response;
+use Sylapi\Courier\Exceptions\TransportException;
+use Sylapi\Courier\Helpers\ResponseHelper;
 
 class EnadawcaCourierPostShipment implements CourierPostShipment
 {
@@ -26,17 +26,17 @@ class EnadawcaCourierPostShipment implements CourierPostShipment
         $response = new Response();
 
         $client = $this->session->client();
+
         try {
             $parameters = new sendEnvelope();
             $parameters->urzadNadania = $this->session->parameters()->postOfficeNumber ?? null;
-            $result = $client->call('sendEnvelope',$parameters);
+            $result = $client->call('sendEnvelope', $parameters);
             $response->shipmentId = $booking->getShipmentId();
             $response->trackingId = $result->idEnvelope;
-            
-        } catch (TransportException $e) {            
+        } catch (TransportException $e) {
             ResponseHelper::pushErrorsToResponse($response, [$e]);
         }
+
         return $response;
     }
-
 }

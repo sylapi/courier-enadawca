@@ -1,7 +1,5 @@
 <?php
 
-
-
 class setJednostkaOrganizacyjnaResponse
 {
     /** @var \errorType */

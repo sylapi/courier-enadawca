@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getEZDOListResponse
 {
     /** @var \EZDOPakietType */

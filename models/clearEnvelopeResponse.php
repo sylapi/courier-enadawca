@@ -1,10 +1,8 @@
 <?php
 
-
-
 class clearEnvelopeResponse
 {
-    /** @var boolean */
+    /** @var bool */
     public $retval;
     /** @var \errorType */
     public $error;

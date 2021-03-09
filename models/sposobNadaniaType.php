@@ -1,7 +1,5 @@
 <?php
 
-
-
 class sposobNadaniaType
 {
     const WERYFIKACJA_WEZEL_DOCELOWY = 'WERYFIKACJA_WEZEL_DOCELOWY';

@@ -1,10 +1,8 @@
 <?php
 
-
-
 class przesylkaListowaZadeklarowanaWartoscType extends przesylkaRejestrowanaType
 {
-    /** @var boolean */
+    /** @var bool */
     public $posteRestante;
     /** @var \wartoscType */
     public $wartosc;

@@ -1,7 +1,5 @@
 <?php
 
-
-
 class changePasswordResponse
 {
     /** @var \errorType */

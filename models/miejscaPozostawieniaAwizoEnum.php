@@ -1,7 +1,5 @@
 <?php
 
-
-
 class miejscaPozostawieniaAwizoEnum
 {
     const SKRZYNKA_ODDAWCZA = 'SKRZYNKA_ODDAWCZA';

@@ -1,11 +1,9 @@
 <?php
 
-
-
 class getOutboxBook
 {
     /** @var int */
     public $idEnvelope;
-    /** @var boolean */
+    /** @var bool */
     public $includeNierejestrowane;
 }

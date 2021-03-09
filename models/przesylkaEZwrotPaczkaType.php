@@ -1,7 +1,5 @@
 <?php
 
-
-
 class przesylkaEZwrotPaczkaType extends przesylkaRejestrowanaType
 {
     /** @var \numerNadaniaType */

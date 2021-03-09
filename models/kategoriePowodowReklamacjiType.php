@@ -1,7 +1,5 @@
 <?php
 
-
-
 class kategoriePowodowReklamacjiType
 {
     /** @var string */

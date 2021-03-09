@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getZapowiedziFakturResponse
 {
     /** @var base64Binary */

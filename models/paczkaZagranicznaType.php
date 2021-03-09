@@ -1,14 +1,12 @@
 <?php
 
-
-
 class paczkaZagranicznaType extends przesylkaRejestrowanaType
 {
     /** @var \zwrotType */
     public $zwrot;
     /** @var \deklaracjaCelnaType */
     public $deklaracjaCelna;
-    /** @var boolean */
+    /** @var bool */
     public $posteRestante;
     /** @var \masaType */
     public $masa;
@@ -18,9 +16,9 @@ class paczkaZagranicznaType extends przesylkaRejestrowanaType
     public $kategoria;
     /** @var \iloscPotwierdzenOdbioruType */
     public $iloscPotwierdzenOdbioru;
-    /** @var boolean */
+    /** @var bool */
     public $utrudnionaManipulacja;
-    /** @var boolean */
+    /** @var bool */
     public $ekspres;
     /** @var string */
     public $numerReferencyjnyCelny;

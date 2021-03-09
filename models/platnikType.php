@@ -1,7 +1,5 @@
 <?php
 
-
-
 class platnikType
 {
     /** @var \uiszczaOplateType */

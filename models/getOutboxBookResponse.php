@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getOutboxBookResponse
 {
     /** @var base64Binary */

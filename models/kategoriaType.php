@@ -1,7 +1,5 @@
 <?php
 
-
-
 class kategoriaType
 {
     const EKONOMICZNA = 'EKONOMICZNA';

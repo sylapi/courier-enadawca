@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getKartyResponse
 {
     /** @var \kartaType */

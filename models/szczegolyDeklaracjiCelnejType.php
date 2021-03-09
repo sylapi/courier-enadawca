@@ -1,7 +1,5 @@
 <?php
 
-
-
 class szczegolyDeklaracjiCelnejType
 {
     /** @var string */

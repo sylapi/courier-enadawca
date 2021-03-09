@@ -1,10 +1,8 @@
 <?php
 
-
-
 class AlistZwyklyType extends przesylkaNieRejestrowanaType
 {
-    /** @var boolean */
+    /** @var bool */
     public $posteRestante;
     /** @var \kategoriaType */
     public $kategoria;
@@ -12,12 +10,12 @@ class AlistZwyklyType extends przesylkaNieRejestrowanaType
     public $gabaryt;
     /** @var \masaType */
     public $masa;
-    /** @var boolean */
+    /** @var bool */
     public $egzemplarzBiblioteczny;
-    /** @var boolean */
+    /** @var bool */
     public $dlaOciemnialych;
-    /** @var boolean */
+    /** @var bool */
     public $obszarMiasto;
-    /** @var boolean */
+    /** @var bool */
     public $miejscowa;
 }

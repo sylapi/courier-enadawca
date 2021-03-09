@@ -1,7 +1,5 @@
 <?php
 
-
-
 class updateProfilResponse
 {
     /** @var \errorType */

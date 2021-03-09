@@ -6,15 +6,13 @@ namespace Sylapi\Courier\Enadawca;
 
 use SoapClient;
 use SoapHeader;
-use Sylapi\Courier\Enadawca\EnadawcaSoap;
-use Sylapi\Courier\Enadawca\EnadawcaParameters;
 
 class EnadawcaSession
 {
     private $parameters;
     private $client;
     private $clientTracking;
-    
+
     public function __construct(EnadawcaParameters $parameters)
     {
         $this->parameters = $parameters;
@@ -33,7 +31,7 @@ class EnadawcaSession
         }
 
         return $this->client;
-    } 
+    }
 
     public function clientTracking(): SoapClient
     {
@@ -42,7 +40,7 @@ class EnadawcaSession
         }
 
         return $this->clientTracking;
-    } 
+    }
 
     private function initializeSession(): void
     {
@@ -56,21 +54,20 @@ class EnadawcaSession
         $this->client->decode_utf8 = true;
     }
 
-
     private function initializeTrackingSession(): void
     {
-        $user =  $this->parameters->loginTracking;
+        $user = $this->parameters->loginTracking;
         $pass = $this->parameters->passwordTracking;
         $apiUrl = $this->parameters->apiUrlTracking;
-        $client =  new SoapClient($apiUrl, [ 'trace' => 1 ]);
+        $client = new SoapClient($apiUrl, ['trace' => 1]);
 
         $wssNs = 'http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-secext-1.0.xsd';
 
-        $auth           = new \stdClass();
+        $auth = new \stdClass();
         $auth->Username = new \SoapVar($user, XSD_STRING, '', $wssNs, '', $wssNs);
         $auth->Password = new \SoapVar($pass, XSD_STRING, '', $wssNs, '', $wssNs);
 
-        $UsernameToken                = new \stdClass();
+        $UsernameToken = new \stdClass();
         $UsernameToken->UsernameToken = new \SoapVar(
             $auth,
             SOAP_ENC_OBJECT,

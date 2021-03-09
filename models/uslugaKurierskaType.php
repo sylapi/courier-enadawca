@@ -1,7 +1,5 @@
 <?php
 
-
-
 class uslugaKurierskaType extends przesylkaRejestrowanaType
 {
     /** @var \pobranieType */
@@ -30,15 +28,15 @@ class uslugaKurierskaType extends przesylkaRejestrowanaType
     public $masa;
     /** @var \wartoscType */
     public $wartosc;
-    /** @var boolean */
+    /** @var bool */
     public $ponadgabaryt;
     /** @var int */
     public $odleglosc;
     /** @var string */
     public $zawartosc;
-    /** @var boolean */
+    /** @var bool */
     public $sprawdzenieZawartosciPrzesylkiPrzezOdbiorce;
-    /** @var boolean */
+    /** @var bool */
     public $ostroznie;
     /** @var \uiszczaOplateType */
     public $uiszczaOplate;

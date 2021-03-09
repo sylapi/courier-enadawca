@@ -1,7 +1,5 @@
 <?php
 
-
-
 class getKierunkiInfo
 {
     /** @var string */

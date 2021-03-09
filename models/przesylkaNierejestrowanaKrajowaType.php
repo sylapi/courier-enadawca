@@ -1,7 +1,5 @@
 <?php
 
-
-
 class przesylkaNierejestrowanaKrajowaType extends przesylkaNieRejestrowanaType
 {
     /** @var \kategoriaType */

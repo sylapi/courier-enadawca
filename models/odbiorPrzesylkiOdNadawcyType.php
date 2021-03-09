@@ -1,13 +1,11 @@
 <?php
 
-
-
 class odbiorPrzesylkiOdNadawcyType
 {
-    /** @var boolean */
+    /** @var bool */
     public $wSobote;
-    /** @var boolean */
+    /** @var bool */
     public $wNiedzieleLubSwieto;
-    /** @var boolean */
+    /** @var bool */
     public $wGodzinachOd20Do7;
 }

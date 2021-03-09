@@ -1,7 +1,5 @@
 <?php
 
-
-
 class zwrotPrzesylkiType
 {
     /** @var \przyczynaZwrotuEnum */

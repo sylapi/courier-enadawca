@@ -1,7 +1,5 @@
 <?php
 
-
-
 class pakietType
 {
     /** @var \kierunekType */

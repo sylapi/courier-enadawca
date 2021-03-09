@@ -1,7 +1,5 @@
 <?php
 
-
-
 class AdoreczeniePrzesylkiType
 {
     /** @var dateTime */
@@ -14,7 +12,7 @@ class AdoreczeniePrzesylkiType
     public $dataPelnomocnictwa;
     /** @var string */
     public $numerPelnomocnictwa;
-    /** @var boolean */
+    /** @var bool */
     public $pieczecFirmowa;
     /** @var \miejscePozostawieniaZawiadomieniaODoreczeniuEnum */
     public $miejscePozostawieniaZawiadomieniaODoreczeniu;

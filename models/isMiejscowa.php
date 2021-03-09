@@ -1,7 +1,5 @@
 <?php
 
-
-
 class isMiejscowa
 {
     /** @var \trasaRequestType */

@@ -1,7 +1,5 @@
 <?php
 
-
-
 class shopEZwrotyType
 {
     /** @var \eZwrotPrzesylkiType */
@@ -36,6 +34,6 @@ class shopEZwrotyType
     public $krs;
     /** @var \eZwrotTypZgodyType */
     public $eZwrotTyp;
-    /** @var boolean */
+    /** @var bool */
     public $wymagalnoscNumeruIdentyfikujacegoPrzesylke;
 }

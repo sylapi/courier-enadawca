@@ -1,15 +1,13 @@
 <?php
 
-
-
 class AdoreczenieUslugaPocztowaType
 {
     /** @var \date */
     public $oczekiwanyTerminDoreczenia;
     /** @var \oczekiwanaGodzinaDoreczeniaUslugiType */
     public $oczekiwanaGodzinaDoreczenia;
-    /** @var boolean */
+    /** @var bool */
     public $wSobote;
-    /** @var boolean */
+    /** @var bool */
     public $doRakWlasnych;
 }

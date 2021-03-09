@@ -4,17 +4,15 @@ declare(strict_types=1);
 
 namespace Sylapi\Courier\Enadawca;
 
+use addShipment;
 use adresType;
 use Exception;
-use addShipment;
 use przesylkaBiznesowaType;
-use Sylapi\Courier\Entities\Response;
-use Sylapi\Courier\Contracts\Shipment;
-use Sylapi\Courier\Helpers\ResponseHelper;
 use Sylapi\Courier\Contracts\CourierCreateShipment;
 use Sylapi\Courier\Contracts\Response as ResponseContract;
-
-
+use Sylapi\Courier\Contracts\Shipment;
+use Sylapi\Courier\Entities\Response;
+use Sylapi\Courier\Helpers\ResponseHelper;
 
 class EnadawcaCourierCreateShipment implements CourierCreateShipment
 {
@@ -29,15 +27,17 @@ class EnadawcaCourierCreateShipment implements CourierCreateShipment
     {
         $client = $this->session->client();
         $response = new Response();
+
         try {
             $result = $client->call('clearEnvelope', []);
             $result = $client->call('addShipment', $this->getShipment($shipment));
             $response->shipmentId = $result->retval->guid ?? null;
             $response->referenceId = $result->retval->guid ?? null;
             $response->trackingId = $result->retval->numerNadania ?? null;
-        } catch ( Exception $e) {
+        } catch (Exception $e) {
             ResponseHelper::pushErrorsToResponse($response, [$e]);
         }
+
         return $response;
     }
 
@@ -45,6 +45,7 @@ class EnadawcaCourierCreateShipment implements CourierCreateShipment
     {
         $shipmentEN = new addShipment();
         $shipmentEN->przesylki[] = $this->getBusinessShipment($shipment);
+
         return $shipmentEN;
     }
 
@@ -58,7 +59,7 @@ class EnadawcaCourierCreateShipment implements CourierCreateShipment
         $package->ostroznie = false;
         $package->guid = $this->getGuid();
 
-        return $package; 
+        return $package;
     }
 
     private function getAddress(Shipment $shipment): adresType
@@ -77,16 +78,16 @@ class EnadawcaCourierCreateShipment implements CourierCreateShipment
         $address->mobile = $shipment->getReceiver()->getPhone();
         $address->osobaKontaktowa = $shipment->getReceiver()->getContactPerson();
         $address->nip = '';
+
         return $address;
     }
 
     private function getGuid(): string
     {
         $result = $this->session->client()->call('getGuid', [
-            'ilosc' => 1
+            'ilosc' => 1,
         ]);
 
         return (string) $result->guid;
     }
-
 }

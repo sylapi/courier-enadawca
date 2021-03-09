@@ -1,21 +1,19 @@
 <?php
 
-
-
 class AdoreczenieType
 {
     /** @var \date */
     public $oczekiwanyTerminDoreczenia;
     /** @var \oczekiwanaGodzinaDoreczeniaType */
     public $oczekiwanaGodzinaDoreczenia;
-    /** @var boolean */
+    /** @var bool */
     public $wSobote;
-    /** @var boolean */
+    /** @var bool */
     public $w90Minut;
-    /** @var boolean */
+    /** @var bool */
     public $wNiedzieleLubSwieto;
-    /** @var boolean */
+    /** @var bool */
     public $doRakWlasnych;
-    /** @var boolean */
+    /** @var bool */
     public $wGodzinachOd20Do7;
 }

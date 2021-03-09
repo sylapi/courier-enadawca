@@ -1,7 +1,5 @@
 <?php
 
-
-
 class trasaRequestType
 {
     /** @var \urzadNadaniaType */

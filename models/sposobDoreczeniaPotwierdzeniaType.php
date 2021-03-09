@@ -1,7 +1,5 @@
 <?php
 
-
-
 class sposobDoreczeniaPotwierdzeniaType
 {
     const TELEFON = 'TELEFON';

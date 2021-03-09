@@ -9,8 +9,7 @@ use SoapFault;
 use Sylapi\Courier\Exceptions\TransportException;
 
 class EnadawcaSoap extends SoapClient
-{   
-
+{
     public static $classmap = [
         'addShipment'                                        => 'addShipment',
         'przesylkaType'                                      => 'przesylkaType',
@@ -286,7 +285,8 @@ class EnadawcaSoap extends SoapClient
         'getPrintForParcel'                                  => 'getPrintForParcel',
     ];
 
-    public function __construct($url, $login, $password, $location = null, $options = []) {
+    public function __construct($url, $login, $password, $location = null, $options = [])
+    {
         $this->url = $url;
         $options['login'] = $login;
         $options['password'] = $password;
@@ -303,7 +303,8 @@ class EnadawcaSoap extends SoapClient
         parent::__construct($url, $options);
     }
 
-    private function _normalizeResponse($data) {
+    private function _normalizeResponse($data)
+    {
         if (is_object($data)) {
             $data = get_object_vars($data);
         }
@@ -311,45 +312,50 @@ class EnadawcaSoap extends SoapClient
             foreach ($data as &$v) {
                 $v = $this->_normalizeResponse($v);
             }
+
             return $data;
         } else {
             return $data;
         }
     }
 
-    private function _checkErrors($data) {
-        if (isset($data['error'])&&is_array($data['error'])) {
+    private function _checkErrors($data)
+    {
+        if (isset($data['error']) && is_array($data['error'])) {
             if (!isset($data['error']['errorNumber'])) {
-                $errors = array();
+                $errors = [];
                 foreach ($data['error'] as $v) {
                     $errors[] = $v['errorDesc'];
                 }
+
                 return implode("\n", $errors);
             } else {
                 return $data['error']['errorDesc'];
             }
         } else {
             if (is_array($data)) {
-                $errors = array();
+                $errors = [];
                 foreach ($data as $d) {
                     $error = $this->_checkErrors($d);
                     if (!empty($error)) {
                         $errors[] = $error;
                     }
                 }
+
                 return implode("\n", $errors);
             }
         }
+
         return '';
     }
 
-
-    public function call($function_name, $parameters = array(), array $options = null) {
-
+    public function call($function_name, $parameters = [], array $options = null)
+    {
         $response = false;
+
         try {
             $options['uri'] = $this->url;
-            $response = $this->__soapCall($function_name, array($parameters), $options);
+            $response = $this->__soapCall($function_name, [$parameters], $options);
             $errors = $this->_checkErrors($this->_normalizeResponse($response));
             if (!empty($errors)) {
                 throw new TransportException($errors);
@@ -357,6 +363,7 @@ class EnadawcaSoap extends SoapClient
         } catch (SoapFault $e) {
             throw new TransportException($e->faultcode);
         }
+
         return $response;
     }
 }

@@ -1,7 +1,5 @@
 <?php
 
-
-
 class placowkaPocztowaType
 {
     /** @var \lokalizacjaGeograficznaType */
@@ -30,13 +28,13 @@ class placowkaPocztowaType
     public $numerLokalu;
     /** @var string */
     public $nazwaWydruk;
-    /** @var boolean */
+    /** @var bool */
     public $punktWydaniaEPrzesylki;
-    /** @var boolean */
+    /** @var bool */
     public $powiadomienieSMS;
-    /** @var boolean */
+    /** @var bool */
     public $punktWydaniaPrzesylkiBiznesowejPlus;
-    /** @var boolean */
+    /** @var bool */
     public $punktWydaniaPrzesylkiBiznesowej;
     /** @var \siecPlacowekEnum */
     public $siecPlacowek;

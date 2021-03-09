@@ -1,7 +1,5 @@
 <?php
 
-
-
 class siecPlacowekEnum
 {
     const POCZTAPOLSKA = 'POCZTAPOLSKA';

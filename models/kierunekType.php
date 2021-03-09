@@ -1,7 +1,5 @@
 <?php
 
-
-
 class kierunekType
 {
     /** @var \kodPocztowyType */

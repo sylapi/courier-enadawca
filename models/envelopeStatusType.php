@@ -1,7 +1,5 @@
 <?php
 
-
-
 class envelopeStatusType
 {
     const WYSLANY = 'WYSLANY';

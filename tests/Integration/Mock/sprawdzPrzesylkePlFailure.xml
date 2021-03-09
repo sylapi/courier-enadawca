@@ -1,0 +1,8 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sprawdzPrzesylkePlResponse>
+	<return>
+		<danePrzesylki nil="true" />
+		<numer>testp-1</numer>
+		<status>-1</status>
+	</return>
+</sprawdzPrzesylkePlResponse>

@@ -1,0 +1,10 @@
+parameters:
+	level: 5
+	paths:
+		- src
+		- tests
+	universalObjectCratesClasses:
+		- ArrayObject
+		- SoapClient
+		- Sylapi\Courier\Contracts\Response
+	checkGenericClassInNonGenericObjectType: false

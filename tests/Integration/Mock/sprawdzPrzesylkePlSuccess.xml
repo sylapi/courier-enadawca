@@ -1,0 +1,336 @@
+<?xml version='1.0' encoding='utf-8'?>
+		<sprawdzPrzesylkePlResponse>
+			<return>
+				<danePrzesylki type="DanePrzesylki">
+					<dataNadania>2021-03-07</dataNadania>
+					<format nil="true" />
+					<kodKrajuNadania>PL</kodKrajuNadania>
+					<kodKrajuPrzezn>PL</kodKrajuPrzezn>
+					<kodRodzPrzes>PX</kodRodzPrzes>
+					<krajNadania>POLSKA</krajNadania>
+					<krajPrzezn>POLSKA</krajPrzezn>
+					<masa nil="true" />
+					<numer>testp0</numer>
+					<proceduraSerwis nil="true" />
+					<rodzPrzes>Pocztex - Przesyłka kurierska krajowa</rodzPrzes>
+					<urzadNadania type="Jednostka">
+						<daneSzczegolowe type="SzczDaneJednostki">
+							<dlGeogr>40.0</dlGeogr>
+							<godzinyPracy type="GodzinyPracy">
+								<dniRobocze type="GodzinyZUwagami">
+									<godziny>08:00-23:00</godziny>
+									<uwagi>test</uwagi>
+								</dniRobocze>
+								<niedzISw nil="true" />
+								<soboty nil="true" />
+							</godzinyPracy>
+							<miejscowosc>Białystok</miejscowosc>
+							<nrDomu>10</nrDomu>
+							<nrLokalu nil="true" />
+							<pna>15-001</pna>
+							<szerGeogr>30.0</szerGeogr>
+							<ulica>ul. Warszawska</ulica>
+						</daneSzczegolowe>
+						<nazwa>UP Białystok 1</nazwa>
+					</urzadNadania>
+					<urzadPrzezn type="Jednostka">
+						<daneSzczegolowe type="SzczDaneJednostki">
+							<dlGeogr>40.0</dlGeogr>
+							<godzinyPracy type="GodzinyPracy">
+								<dniRobocze type="GodzinyZUwagami">
+									<godziny>08:00-23:00</godziny>
+									<uwagi>test</uwagi>
+								</dniRobocze>
+								<niedzISw nil="true" />
+								<soboty nil="true" />
+							</godzinyPracy>
+							<miejscowosc>Warszawa</miejscowosc>
+							<nrDomu>4</nrDomu>
+							<nrLokalu nil="true" />
+							<pna>00-404</pna>
+							<szerGeogr>30.0</szerGeogr>
+							<ulica>ul. Ludna</ulica>
+						</daneSzczegolowe>
+						<nazwa>UP Warszawa 18</nazwa>
+					</urzadPrzezn>
+					<zakonczonoObsluge>false</zakonczonoObsluge>
+					<zdarzenia type="ListaZdarzen">
+						<zdarzenie type="Zdarzenie">
+							<czas>2021-03-07 12:57</czas>
+							<jednostka type="Jednostka">
+								<daneSzczegolowe type="SzczDaneJednostki">
+									<dlGeogr>40.0</dlGeogr>
+									<godzinyPracy type="GodzinyPracy">
+										<dniRobocze type="GodzinyZUwagami">
+											<godziny>08:00-23:00</godziny>
+											<uwagi>test</uwagi>
+										</dniRobocze>
+										<niedzISw nil="true" />
+										<soboty nil="true" />
+									</godzinyPracy>
+									<miejscowosc>Białystok</miejscowosc>
+									<nrDomu>10</nrDomu>
+									<nrLokalu nil="true" />
+									<pna>15-001</pna>
+									<szerGeogr>30.0</szerGeogr>
+									<ulica>ul. Warszawska</ulica>
+								</daneSzczegolowe>
+								<nazwa>UP Białystok 1</nazwa>
+							</jednostka>
+							<kod>P_NAD</kod>
+							<konczace>false</konczace>
+							<nazwa>Nadanie</nazwa>
+							<przyczyna nil="true" />
+						</zdarzenie>
+						<zdarzenie type="Zdarzenie">
+							<czas>2021-03-07 14:57</czas>
+							<jednostka type="Jednostka">
+								<daneSzczegolowe type="SzczDaneJednostki">
+									<dlGeogr>40.0</dlGeogr>
+									<godzinyPracy type="GodzinyPracy">
+										<dniRobocze type="GodzinyZUwagami">
+											<godziny>08:00-23:00</godziny>
+											<uwagi>test</uwagi>
+										</dniRobocze>
+										<niedzISw nil="true" />
+										<soboty nil="true" />
+									</godzinyPracy>
+									<miejscowosc>Białystok</miejscowosc>
+									<nrDomu>10</nrDomu>
+									<nrLokalu nil="true" />
+									<pna>15-001</pna>
+									<szerGeogr>30.0</szerGeogr>
+									<ulica>ul. Warszawska</ulica>
+								</daneSzczegolowe>
+								<nazwa>UP Białystok 1</nazwa>
+							</jednostka>
+							<kod>P_WZL</kod>
+							<konczace>false</konczace>
+							<nazwa>Wysłanie z ładunkiem</nazwa>
+							<przyczyna nil="true" />
+						</zdarzenie>
+						<zdarzenie type="Zdarzenie">
+							<czas>2021-03-07 16:57</czas>
+							<jednostka type="Jednostka">
+								<daneSzczegolowe type="SzczDaneJednostki">
+									<dlGeogr>40.0</dlGeogr>
+									<godzinyPracy type="GodzinyPracy">
+										<dniRobocze type="GodzinyZUwagami">
+											<godziny>08:00-23:00</godziny>
+											<uwagi>test</uwagi>
+										</dniRobocze>
+										<niedzISw nil="true" />
+										<soboty nil="true" />
+									</godzinyPracy>
+									<miejscowosc>Białystok</miejscowosc>
+									<nrDomu>15</nrDomu>
+									<nrLokalu nil="true" />
+									<pna>15-900</pna>
+									<szerGeogr>30.0</szerGeogr>
+									<ulica>ul. Kolejowa</ulica>
+								</daneSzczegolowe>
+								<nazwa>CP WER Białystok</nazwa>
+							</jednostka>
+							<kod>P_PZL</kod>
+							<konczace>false</konczace>
+							<nazwa>Przyjęcie z ładunkiem</nazwa>
+							<przyczyna nil="true" />
+						</zdarzenie>
+						<zdarzenie type="Zdarzenie">
+							<czas>2021-03-07 18:57</czas>
+							<jednostka type="Jednostka">
+								<daneSzczegolowe type="SzczDaneJednostki">
+									<dlGeogr>40.0</dlGeogr>
+									<godzinyPracy type="GodzinyPracy">
+										<dniRobocze type="GodzinyZUwagami">
+											<godziny>08:00-23:00</godziny>
+											<uwagi>test</uwagi>
+										</dniRobocze>
+										<niedzISw nil="true" />
+										<soboty nil="true" />
+									</godzinyPracy>
+									<miejscowosc>Białystok</miejscowosc>
+									<nrDomu>15</nrDomu>
+									<nrLokalu nil="true" />
+									<pna>15-900</pna>
+									<szerGeogr>30.0</szerGeogr>
+									<ulica>ul. Kolejowa</ulica>
+								</daneSzczegolowe>
+								<nazwa>CP WER Białystok</nazwa>
+							</jednostka>
+							<kod>P_WZL</kod>
+							<konczace>false</konczace>
+							<nazwa>Wysłanie z ładunkiem</nazwa>
+							<przyczyna nil="true" />
+						</zdarzenie>
+						<zdarzenie type="Zdarzenie">
+							<czas>2021-03-07 20:57</czas>
+							<jednostka type="Jednostka">
+								<daneSzczegolowe type="SzczDaneJednostki">
+									<dlGeogr>40.0</dlGeogr>
+									<godzinyPracy type="GodzinyPracy">
+										<dniRobocze type="GodzinyZUwagami">
+											<godziny>08:00-23:00</godziny>
+											<uwagi>test</uwagi>
+										</dniRobocze>
+										<niedzISw nil="true" />
+										<soboty nil="true" />
+									</godzinyPracy>
+									<miejscowosc>Warszawa</miejscowosc>
+									<nrDomu>8</nrDomu>
+									<nrLokalu nil="true" />
+									<pna>00-900</pna>
+									<szerGeogr>30.0</szerGeogr>
+									<ulica>ul. Łączyny</ulica>
+								</daneSzczegolowe>
+								<nazwa>CP WER Warszawa</nazwa>
+							</jednostka>
+							<kod>P_PZL</kod>
+							<konczace>false</konczace>
+							<nazwa>Przyjęcie z ładunkiem</nazwa>
+							<przyczyna nil="true" />
+						</zdarzenie>
+						<zdarzenie type="Zdarzenie">
+							<czas>2021-03-07 22:57</czas>
+							<jednostka type="Jednostka">
+								<daneSzczegolowe type="SzczDaneJednostki">
+									<dlGeogr>40.0</dlGeogr>
+									<godzinyPracy type="GodzinyPracy">
+										<dniRobocze type="GodzinyZUwagami">
+											<godziny>08:00-23:00</godziny>
+											<uwagi>test</uwagi>
+										</dniRobocze>
+										<niedzISw nil="true" />
+										<soboty nil="true" />
+									</godzinyPracy>
+									<miejscowosc>Warszawa</miejscowosc>
+									<nrDomu>8</nrDomu>
+									<nrLokalu nil="true" />
+									<pna>00-900</pna>
+									<szerGeogr>30.0</szerGeogr>
+									<ulica>ul. Łączyny</ulica>
+								</daneSzczegolowe>
+								<nazwa>CP WER Warszawa</nazwa>
+							</jednostka>
+							<kod>P_WZL</kod>
+							<konczace>false</konczace>
+							<nazwa>Wysłanie z ładunkiem</nazwa>
+							<przyczyna nil="true" />
+						</zdarzenie>
+						<zdarzenie type="Zdarzenie">
+							<czas>2021-03-08 00:57</czas>
+							<jednostka type="Jednostka">
+								<daneSzczegolowe type="SzczDaneJednostki">
+									<dlGeogr>40.0</dlGeogr>
+									<godzinyPracy type="GodzinyPracy">
+										<dniRobocze type="GodzinyZUwagami">
+											<godziny>08:00-23:00</godziny>
+											<uwagi>test</uwagi>
+										</dniRobocze>
+										<niedzISw nil="true" />
+										<soboty nil="true" />
+									</godzinyPracy>
+									<miejscowosc>Warszawa</miejscowosc>
+									<nrDomu>4</nrDomu>
+									<nrLokalu nil="true" />
+									<pna>00-404</pna>
+									<szerGeogr>30.0</szerGeogr>
+									<ulica>ul. Ludna</ulica>
+								</daneSzczegolowe>
+								<nazwa>UP Warszawa 18</nazwa>
+							</jednostka>
+							<kod>P_PZL</kod>
+							<konczace>false</konczace>
+							<nazwa>Przyjęcie z ładunkiem</nazwa>
+							<przyczyna nil="true" />
+						</zdarzenie>
+						<zdarzenie type="Zdarzenie">
+							<czas>2021-03-08 02:57</czas>
+							<jednostka type="Jednostka">
+								<daneSzczegolowe type="SzczDaneJednostki">
+									<dlGeogr>40.0</dlGeogr>
+									<godzinyPracy type="GodzinyPracy">
+										<dniRobocze type="GodzinyZUwagami">
+											<godziny>08:00-23:00</godziny>
+											<uwagi>test</uwagi>
+										</dniRobocze>
+										<niedzISw nil="true" />
+										<soboty nil="true" />
+									</godzinyPracy>
+									<miejscowosc>Warszawa</miejscowosc>
+									<nrDomu>4</nrDomu>
+									<nrLokalu nil="true" />
+									<pna>00-404</pna>
+									<szerGeogr>30.0</szerGeogr>
+									<ulica>ul. Ludna</ulica>
+								</daneSzczegolowe>
+								<nazwa>UP Warszawa 18</nazwa>
+							</jednostka>
+							<kod>P_WD</kod>
+							<konczace>false</konczace>
+							<nazwa>Wydanie doręczycielowi</nazwa>
+							<przyczyna nil="true" />
+						</zdarzenie>
+						<zdarzenie type="Zdarzenie">
+							<czas>2021-03-08 04:57</czas>
+							<jednostka type="Jednostka">
+								<daneSzczegolowe type="SzczDaneJednostki">
+									<dlGeogr>40.0</dlGeogr>
+									<godzinyPracy type="GodzinyPracy">
+										<dniRobocze type="GodzinyZUwagami">
+											<godziny>08:00-23:00</godziny>
+											<uwagi>test</uwagi>
+										</dniRobocze>
+										<niedzISw nil="true" />
+										<soboty nil="true" />
+									</godzinyPracy>
+									<miejscowosc>Warszawa</miejscowosc>
+									<nrDomu>4</nrDomu>
+									<nrLokalu nil="true" />
+									<pna>00-404</pna>
+									<szerGeogr>30.0</szerGeogr>
+									<ulica>ul. Ludna</ulica>
+								</daneSzczegolowe>
+								<nazwa>UP Warszawa 18</nazwa>
+							</jednostka>
+							<kod>P_A</kod>
+							<konczace>false</konczace>
+							<nazwa>Awizo</nazwa>
+							<przyczyna nil="true" />
+						</zdarzenie>
+						<zdarzenie type="Zdarzenie">
+							<czas>2021-03-08 10:57</czas>
+							<jednostka type="Jednostka">
+								<daneSzczegolowe type="SzczDaneJednostki">
+									<dlGeogr>40.0</dlGeogr>
+									<godzinyPracy type="GodzinyPracy">
+										<dniRobocze type="GodzinyZUwagami">
+											<godziny>08:00-23:00</godziny>
+											<uwagi>test</uwagi>
+										</dniRobocze>
+										<niedzISw nil="true" />
+										<soboty nil="true" />
+									</godzinyPracy>
+									<miejscowosc>Warszawa</miejscowosc>
+									<nrDomu>4</nrDomu>
+									<nrLokalu nil="true" />
+									<pna>00-404</pna>
+									<szerGeogr>30.0</szerGeogr>
+									<ulica>ul. Ludna</ulica>
+								</daneSzczegolowe>
+								<nazwa>UP Warszawa 18</nazwa>
+							</jednostka>
+							<kod>P_D</kod>
+							<konczace>true</konczace>
+							<nazwa>Doręczenie</nazwa>
+							<przyczyna type="Przyczyna">
+								<kod>P_D_TEST</kod>
+								<nazwa>Testowa przyczyna zdarzenia</nazwa>
+							</przyczyna>
+						</zdarzenie>
+					</zdarzenia>
+				</danePrzesylki>
+				<numer>testp0</numer>
+				<status>0</status>
+			</return>
+		</sprawdzPrzesylkePlResponse>

@@ -1,0 +1,11 @@
+<?php
+
+
+
+class rodzajPaletyType
+{
+    const EUR = 'EUR';
+    const POLPALETA = 'POLPALETA';
+    const INNA = 'INNA';
+    const PRZEMYSLOWA = 'PRZEMYSLOWA';
+}

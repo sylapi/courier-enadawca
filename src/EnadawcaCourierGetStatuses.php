@@ -24,6 +24,7 @@ class EnadawcaCourierGetStatuses implements CourierGetStatuses
     public function getStatus(string $shipmentId): StatusContract
     {
         $client = $this->session->clientTracking();
+
         try {
             $response = $client->__soapCall(
                 'sprawdzPrzesylkePl',

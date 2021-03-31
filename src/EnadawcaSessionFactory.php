@@ -14,8 +14,8 @@ class EnadawcaSessionFactory
     private $parameters;
 
     //These constants can be extracted into injected configuration
-    const API_LIVE = 'https://live.enadawca.test/websrv/labs.wsdl';
-    const API_LIVE_ENDPOINT = 'https://live.enadawca.test/websrv/labs.php';
+    const API_LIVE = 'https://e-nadawca.poczta-polska.pl/websrv/en.wsdl';
+    const API_LIVE_ENDPOINT = 'https://e-nadawca.poczta-polska.pl/websrv/en.php';
     const API_SANDBOX = 'https://en-testwebapi.poczta-polska.pl/websrv/en.wsdl';
     const API_SANDBOX_ENDPOINT = 'https://en-testwebapi.poczta-polska.pl/websrv/en.php';
     const API_LIVE_TRACKING = 'https://tt.poczta-polska.pl/Sledzenie/services/Sledzenie?wsdl';

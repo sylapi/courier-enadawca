@@ -6,6 +6,8 @@ namespace Sylapi\Courier\Enadawca;
 
 use addShipment;
 use adresType;
+use ubezpieczenieType;
+use pobranieType;
 use Exception;
 use przesylkaBiznesowaType;
 use Sylapi\Courier\Contracts\CourierCreateShipment;
@@ -29,7 +31,7 @@ class EnadawcaCourierCreateShipment implements CourierCreateShipment
         $response = new Response();
 
         try {
-            $result = $client->call('clearEnvelope', []);
+            // $result = $client->call('clearEnvelope', []);
             $result = $client->call('addShipment', $this->getShipment($shipment));
             $response->shipmentId = $result->retval->guid ?? null;
             $response->referenceId = $result->retval->guid ?? null;
@@ -56,9 +58,27 @@ class EnadawcaCourierCreateShipment implements CourierCreateShipment
         $package->gabaryt = $this->session->parameters()->packageSize;
         $package->masa = ($shipment->getParcel()->getWeight() * 1000);
         $package->opis = $shipment->getContent();
-        $package->ostroznie = false;
         $package->guid = $this->getGuid();
+        $package->ostroznie = $this->session->parameters()->carefully ?? false;
+        
+        /*
+        * Insurance
+        */
+        if( $this->session->parameters()->hasProperty('insurance_amount') ) {
+            $package->ubezpieczenie = $this->getInsurance();
+        }
 
+        /*
+        * COD
+        */
+        if( $this->session->parameters()->hasProperty('cod') 
+            && $this->session->parameters()->cod
+            && $this->session->parameters()->hasProperty('cod_amount') 
+            && $this->session->parameters()->hasProperty('cod_title') 
+            && $this->session->parameters()->hasProperty('bank_number') 
+        ) {
+            $package->pobranie = $this->getCOD();
+        }
         return $package;
     }
 
@@ -80,6 +100,24 @@ class EnadawcaCourierCreateShipment implements CourierCreateShipment
         $address->nip = '';
 
         return $address;
+    }
+
+    private function getInsurance(): ubezpieczenieType
+    {
+        $insurance = new ubezpieczenieType();
+        $insurance->rodzaj = $this->session->parameters()->getInsuranceType();
+        $insurance->kwota = $this->session->parameters()->insurance_amount;
+        return $insurance;
+    }
+
+    private function getCOD(): pobranieType
+    {   
+        $cod = new pobranieType();
+        $cod->kwotaPobrania = $this->session->parameters()->cod_amount ?? '';
+        $cod->nrb = $this->session->parameters()->bank_number ?? '';
+        $cod->sposobPobrania = $this->session->parameters()->cod_method ?? '';
+        $cod->tytulem = $this->session->parameters()->cod_title;
+        return $cod;
     }
 
     private function getGuid(): string

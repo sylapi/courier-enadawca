@@ -8,6 +8,13 @@ use ArrayObject;
 
 class EnadawcaParameters extends ArrayObject
 {
+    const DEFAULT_INSURANCE_TYPE = 'STANDARD';
+
+    public function getInsuranceType()
+    {
+        return $this->hasProperty('insurance_type') ? $this->insurance_type : self::DEFAULT_INSURANCE_TYPE;
+    }
+
     /**
      * @param array<string, mixed> $parameters
      */
@@ -20,4 +27,6 @@ class EnadawcaParameters extends ArrayObject
     {
         return property_exists($this, $name);
     }
+
+
 }

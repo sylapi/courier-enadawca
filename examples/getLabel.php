@@ -11,11 +11,11 @@ $courier = CourierFactory::create('Enadawca', [
     'labelMethod'       => 'EACH_PARCEL_SEPARATELY', //Default: EACH_PARCEL_SEPARATELY
     'carefully'         => true,
     'insurance_type'    => 'STANDARD',
-    'insurance_amount'  =>  500000, //Kwota w groszach
+    'insurance_amount'  => 500000, //Kwota w groszach
     'cod'               => true,
     'cod_amount'        => 2000, //Kwota w groszach
     'cod_title'         => 'Tytuł przelewu',
-    'cod_method'        => 'RACHUNEK_BANKOWY', 
+    'cod_method'        => 'RACHUNEK_BANKOWY',
     'bank_number'       => '1111111111111111111111111',
 ]);
 

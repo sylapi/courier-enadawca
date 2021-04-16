@@ -27,6 +27,4 @@ class EnadawcaParameters extends ArrayObject
     {
         return property_exists($this, $name);
     }
-
-
 }

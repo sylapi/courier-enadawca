@@ -6,15 +6,15 @@ namespace Sylapi\Courier\Enadawca;
 
 use addShipment;
 use adresType;
-use ubezpieczenieType;
-use pobranieType;
 use Exception;
+use pobranieType;
 use przesylkaBiznesowaType;
 use Sylapi\Courier\Contracts\CourierCreateShipment;
 use Sylapi\Courier\Contracts\Response as ResponseContract;
 use Sylapi\Courier\Contracts\Shipment;
 use Sylapi\Courier\Entities\Response;
 use Sylapi\Courier\Helpers\ResponseHelper;
+use ubezpieczenieType;
 
 class EnadawcaCourierCreateShipment implements CourierCreateShipment
 {
@@ -60,25 +60,26 @@ class EnadawcaCourierCreateShipment implements CourierCreateShipment
         $package->opis = $shipment->getContent();
         $package->guid = $this->getGuid();
         $package->ostroznie = $this->session->parameters()->carefully ?? false;
-        
+
         /*
         * Insurance
         */
-        if( $this->session->parameters()->hasProperty('insurance_amount') ) {
+        if ($this->session->parameters()->hasProperty('insurance_amount')) {
             $package->ubezpieczenie = $this->getInsurance();
         }
 
         /*
         * COD
         */
-        if( $this->session->parameters()->hasProperty('cod') 
+        if ($this->session->parameters()->hasProperty('cod')
             && $this->session->parameters()->cod
-            && $this->session->parameters()->hasProperty('cod_amount') 
-            && $this->session->parameters()->hasProperty('cod_title') 
-            && $this->session->parameters()->hasProperty('bank_number') 
+            && $this->session->parameters()->hasProperty('cod_amount')
+            && $this->session->parameters()->hasProperty('cod_title')
+            && $this->session->parameters()->hasProperty('bank_number')
         ) {
             $package->pobranie = $this->getCOD();
         }
+
         return $package;
     }
 
@@ -107,16 +108,18 @@ class EnadawcaCourierCreateShipment implements CourierCreateShipment
         $insurance = new ubezpieczenieType();
         $insurance->rodzaj = $this->session->parameters()->getInsuranceType();
         $insurance->kwota = $this->session->parameters()->insurance_amount;
+
         return $insurance;
     }
 
     private function getCOD(): pobranieType
-    {   
+    {
         $cod = new pobranieType();
         $cod->kwotaPobrania = $this->session->parameters()->cod_amount ?? '';
         $cod->nrb = $this->session->parameters()->bank_number ?? '';
         $cod->sposobPobrania = $this->session->parameters()->cod_method ?? '';
         $cod->tytulem = $this->session->parameters()->cod_title;
+
         return $cod;
     }
 
